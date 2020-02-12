@@ -1,0 +1,3 @@
+[submodule "repos/nvim"]
+	path = repos/nvim
+	url = https://github.com/dragonsourced/nvim

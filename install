@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# Clone various repositories and move them to the proper place.
+
+sudo echo "Authorization accepted."
+
+pwd="$PWD"
+locations="$pwd/locations"
+
+cp profile ~/.profile
+. ~/.profile
+
+mkdir -p src/
+cd src/ || exit
+
+install() {
+    src="$1"
+    dest="$2"
+
+    echo "$src"
+
+    dir="$(basename "$src")"
+    script="$pwd/scripts/$dir"
+
+    [ -d "$dir" ] || git clone "$src" "$dir"
+
+    cpwd="$PWD"
+    if [ -f "$script" ]; then
+        cd "$dir" && sh "$script"
+    fi
+    cd "$cpwd"
+
+    if [ -d "$dest" ]; then
+        echo "$src already installed"
+    else
+        mkdir -p "$(dirname "$dest")"
+        mv "$dir" "$dest"
+    fi
+}
+
+# shellcheck disable=1090
+. "$locations"
+
+locations
