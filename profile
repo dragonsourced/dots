@@ -37,6 +37,8 @@ export EDITOR=/usr/bin/nvim
 export TERMINAL=/usr/local/bin/st
 export BINDIR=${HOME}/bin
 
+clear
+cal
 echo
 printf '\e[1m'
 cat ~/.notes 2> /dev/null
