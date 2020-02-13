@@ -13,6 +13,7 @@ install() {
     dest="$2"
     destdir="$(dirname "$2")"
     name="$(basename "$src")"
+    srcdir="src/$name"
 
     mkdir -p "$destdir"
     mkdir -p src
@@ -25,7 +26,8 @@ install() {
         echo "$src is already installed"
     else
         mkdir -p "$destdir"
-        git clone "$src" "$dest"
+        git clone "$src" "$srcdir"
+        ln -s "$srcdir" "$dest"
         script="$PWD/scripts/$name"
         if [ -f "$script" ]; then
             (
