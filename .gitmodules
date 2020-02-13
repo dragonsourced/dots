@@ -5,5 +5,5 @@
 	path = repos/sowm
 	url = https://github.com/dragonsourced/sowm
 [submodule "nvim"]
-	path = nvim
+	path = sub/nvim
 	url = https://github.com/dragonsourced/nvim

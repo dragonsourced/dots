@@ -27,5 +27,5 @@ install() {
 # Install various files
 make install -C sowm
 
-install nvim ~/.config/nvim
-install sowm ~/src/ui/sowm
+install sub/nvim ~/.config/nvim
+install sub/sowm ~/src/ui/sowm
