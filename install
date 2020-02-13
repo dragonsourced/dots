@@ -8,6 +8,10 @@ case "$1" in
     -f) FORCE=1 ;;
 esac
 
+tilde() {
+    echo "$*" | sed "s|$HOME|~|"
+}
+
 install() {
     src="$1"
     dest="$2"
@@ -21,7 +25,7 @@ install() {
     [ "$FORCE" ] && [ -L "$dest" ] && rm "$dest"
 
     if [ -L "$dest" ]; then
-        echo "$src is already installed"
+        echo "$(tilde "$dest") is already installed"
     else
         mkdir -p "$destdir"
         [ "$FORCE" ] && [ -d "$srcdir" ] && rm -rf "$srcdir"
