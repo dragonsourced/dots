@@ -43,6 +43,10 @@ make install -C sub/sowm
 make install -C sub/utils
 ( cd sub/utils/sfeed_fmt || exit; go install )
 
+# Install vim-plug for Neovim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 install sub/nvim  ~/.config/nvim
 install sub/sowm  ~/src/ui/sowm
 install sub/utils ~/src/utils
