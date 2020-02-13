@@ -6,7 +6,11 @@
 # Load dircolors
 
 if [ -x /usr/bin/dircolors ]; then
-    [ -r ~/.dircolors ] && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    if [ -r ~/.dircolors ]; then
+        eval "$(dircolors -b ~/.dircolors)"
+    else
+        eval "$(dircolors -b)"
+    fi
 fi
 
 # Automatically show git status of a directory.
@@ -25,7 +29,7 @@ __cdir() {
 }
 
 __whoami() {
-    printf '%s@%s' $(whoami) $(hostname)
+    printf '%s@%s' "$(whoami)" "$(hostname)"
 }
 
 PS1='$(__whoami) $(date +"%l:%M %p") $(__cdir) \$ '
@@ -45,4 +49,4 @@ alias make='make -j$(nproc)'
 
 # Path directories.
 
-export PATH="$HOME/bin:$HOME/go/bin:$hOME/src/scripts:$PATH"
+export PATH="$HOME/bin:$HOME/go/bin:$HOME/src/scripts:$PATH"
