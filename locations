@@ -1,7 +1,0 @@
-# A list of repositories and the locations to move them.
-
-locations() {
-    install https://github.com/dragonsourced/nvim  ~/.config/nvim
-    install https://github.com/dragonsourced/sowm  ~/src/ui/sowm
-    #install https://github.com/dragonsourced/utils ~/src/utils
-}

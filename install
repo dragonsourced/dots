@@ -2,43 +2,16 @@
 #
 # Clone various repositories and move them to the proper place.
 
-sudo echo "Authorization accepted."
-
-pwd="$PWD"
-locations="$pwd/locations"
-
-cp profile ~/.profile
-. ~/.profile
-
-mkdir -p src/
-cd src/ || exit
+# Initialize all the submodules.
+git submodule update --init --recursive
 
 install() {
-    src="$1"
-    dest="$2"
-
-    echo "$src"
-
-    dir="$(basename "$src")"
-    script="$pwd/scripts/$dir"
-
-    [ -d "$dir" ] || git clone "$src" "$dir"
-
-    cpwd="$PWD"
-    if [ -f "$script" ]; then
-        cd "$dir" && sh "$script"
-    fi
-    cd "$cpwd"
-
-    if [ -d "$dest" ]; then
-        echo "$src already installed"
-    else
-        mkdir -p "$(dirname "$dest")"
-        mv "$dir" "$dest"
-    fi
+    mkdir -p "$(dirname "$2")"
+    [ -d "$1" ] || ln -s "$1" "$2"
 }
 
-# shellcheck disable=1090
-. "$locations"
+# Install various files
+make install -C sowm
 
-locations
+install nvim ~/.config/nvim
+install sowm ~/src/repos/ui/sowm
