@@ -2,30 +2,27 @@
 #
 # Clone various repositories and move them to the proper place.
 
-# Initialize all the submodules.
-git submodule update --init --recursive
-
 # install(from, to, script)
 
 install() {
-    mkdir -p "$(dirname "$2")"
+    src="$1"
+    dest="$2"
+    destdir="$(dirname "$2")"
+    name="$(filename "$src")"
 
-    [ -L "$2" ] && rm "$2"
+    mkdir -p "$destdir"
+    mkdir -p src
 
-    if [ -f "$2" ] || [ -d "$2" ]; then
-        echo "$1 is already installed"
+    if [ -d "$dest" ] || [ -f "$dest" ]; then
+        echo "$src is already installed"
     else
-        echo "$1 -> $2"
-        if [ -d "$PWD/$1" ]; then
-            ln -s "$PWD/$1" "$2"
-        else
-            link "$PWD/$1" "$2"
-        fi
-	script="$PWD/scripts/$1"
+	mkdir -p "$destdir"
+	git clone "$src" "$dest"
+	script="scripts/$name"
 	if [ -f "$script" ]; then
 		(
-			cd "$2" || exit
-			sh "$script"
+			cd "$dest" || exit
+			sh "$name"
 		)
 	fi
     fi
@@ -47,8 +44,8 @@ make install -C sub/utils
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-install sub/scripts     ~/src/scripts
-install sub/nvim        ~/.config/nvim
-install sub/sowm        ~/src/ui/sowm
-install sub/st          ~/src/ui/st
-install sub/utils       ~/src/utils
+install https://github.com/dragonsourced/scripts ~/src/scripts
+install https://github.com/dragonsourced/nvim    ~/.config/nvim
+install https://github.com/dragonsourced/sowm    ~/src/ui/sowm
+install https://github.com/dragonsourced/st      ~/src/ui/st
+install https://github.com/dragonsourced/utils   ~/src/utils
