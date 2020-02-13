@@ -7,3 +7,6 @@
 [submodule "sub/nvim"]
 	path = sub/nvim
 	url = https://github.com/dragonsourced/nvim
+[submodule "sub/st"]
+	path = sub/st
+	url = https://github.com/dragonsourced/st

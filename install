@@ -49,4 +49,5 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 install sub/nvim  ~/.config/nvim
 install sub/sowm  ~/src/ui/sowm
+install sub/st    ~/src/ui/st
 install sub/utils ~/src/utils
