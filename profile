@@ -51,4 +51,4 @@ alias make='make -j$(nproc)'
 
 # Path directories.
 
-export PATH="$HOME/bin:$HOME/go/bin:$HOME/src/scripts:$PATH"
+export PATH="$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH"
