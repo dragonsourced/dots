@@ -30,7 +30,7 @@ install() {
         mkdir -p "$destdir"
         [ "$FORCE" ] && [ -d "$srcdir" ] && rm -rf "$srcdir"
         [ -d "$srcdir" ] || git clone "$src" "$srcdir"
-        ln -s "$srcdir" "$dest"
+        cp -r "$srcdir" "$dest"
         script="$PWD/scripts/$name"
         if [ -f "$script" ]; then
             (
@@ -42,7 +42,7 @@ install() {
 }
 
 # Install the profile first, as it has all the PATH modifications.
-link profile ~/.profile
+cp profile ~/.profile
 
 # shellcheck disable=1090
 . ~/.profile
