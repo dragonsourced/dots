@@ -47,7 +47,8 @@ make install -C sub/utils
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-install sub/nvim  ~/.config/nvim
-install sub/sowm  ~/src/ui/sowm
-install sub/st    ~/src/ui/st
-install sub/utils ~/src/utils
+install sub/scripts     ~/src/scripts
+install sub/nvim        ~/.config/nvim
+install sub/sowm        ~/src/ui/sowm
+install sub/st          ~/src/ui/st
+install sub/utils       ~/src/utils

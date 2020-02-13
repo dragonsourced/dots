@@ -10,3 +10,6 @@
 [submodule "sub/st"]
 	path = sub/st
 	url = https://github.com/dragonsourced/st
+[submodule "sub/scripts"]
+	path = sub/scripts
+	url = https://github.com/dragonsourced/scripts
