@@ -9,7 +9,10 @@ git submodule update --init --recursive
 
 install() {
     mkdir -p "$(dirname "$2")"
-    if [ -L "$2" ]; then
+
+    [ -L "$2" ] && rm "$2"
+
+    if [ -f "$2" ] || [ -d "$2" ]; then
         echo "$1 is already installed"
     else
         echo "$1 -> $2"
@@ -17,7 +20,7 @@ install() {
 	script="$PWD/scripts/$1"
 	if [ -f "$script" ]; then
 		(
-			cd "$2"
+			cd "$2" || exit
 			sh "$script"
 		)
 	fi
@@ -25,7 +28,7 @@ install() {
 }
 
 # Install various files
-make install -C sowm
+make install -C sub/sowm
 
 install sub/nvim ~/.config/nvim
 install sub/sowm ~/src/ui/sowm
