@@ -21,7 +21,7 @@ ls() {
     else
         git status -sb 2> /dev/null
     fi
-    /bin/ls -shvp --group-directories-first --color=auto "$@"
+    /bin/ls -shvp --color=auto "$@"
 }
 
 __cdir() {
@@ -39,10 +39,7 @@ export BINDIR=${HOME}/bin
 
 clear
 cal
-echo
-printf '\e[1m'
-cat ~/.notes 2> /dev/null
-printf '\e[0m'
+cat ~/TODO 2> /dev/null
 echo
 
 # Use as many processes as possible for make, because I have no patience.
