@@ -13,6 +13,14 @@ take absolutely no responsibility if you decide to run it on your system.
             misc/
         pkg/
 
+# Dependencies
+
+    Neovim
+    Pynvim (install with `pip`)
+    Curl
+    GNU Make
+    Golang
+
 # Installation
 
     ./install
