@@ -12,3 +12,13 @@ take absolutely no responsibility if you decide to run it on your system.
             repos/
             misc/
         pkg/
+
+# Installation
+
+    ./install
+
+Also, next time you open Neovim type
+
+    :PlugInstall
+
+to download all the vim-plug stuff that I haven't figured out how to automate yet.
