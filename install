@@ -16,7 +16,11 @@ install() {
         echo "$1 is already installed"
     else
         echo "$1 -> $2"
-        ln -s "$PWD/$1" "$2"
+        if [ -d "$PWD/$1" ]; then
+            ln -s "$PWD/$1" "$2"
+        else
+            link "$PWD/$1" "$2"
+        fi
 	script="$PWD/scripts/$1"
 	if [ -f "$script" ]; then
 		(
@@ -32,3 +36,4 @@ make install -C sub/sowm
 
 install sub/nvim ~/.config/nvim
 install sub/sowm ~/src/ui/sowm
+install profile  ~/.profile
