@@ -3,7 +3,7 @@
 # Loaded by the shell, probably.
 # Who knows?
 
-# Load dircolors
+# Load dircolors.
 
 if [ -x /usr/bin/dircolors ]; then
     if [ -r ~/.dircolors ]; then
