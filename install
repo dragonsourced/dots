@@ -42,7 +42,7 @@ install() {
 }
 
 # Install the profile first, as it has all the PATH modifications.
-cp profile  ~/.profile
+link profile ~/.profile
 
 # shellcheck disable=1090
 . ~/.profile
