@@ -31,9 +31,18 @@ install() {
     fi
 }
 
+# Install the profile first, as it has all the PATH modifications.
+install profile  ~/.profile
+
+# shellcheck disable=1090
+. ~/.profile
+
 # Install various files
 make install -C sub/sowm
 
-install sub/nvim ~/.config/nvim
-install sub/sowm ~/src/ui/sowm
-install profile  ~/.profile
+make install -C sub/utils
+( cd sub/utils/sfeed_fmt || exit; go install )
+
+install sub/nvim  ~/.config/nvim
+install sub/sowm  ~/src/ui/sowm
+install sub/utils ~/src/utils
