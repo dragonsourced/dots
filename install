@@ -4,45 +4,43 @@
 
 # install(from, to, script)
 
+case "$1" in
+    -f) FORCE=1 ;;
+esac
+
 install() {
     src="$1"
     dest="$2"
     destdir="$(dirname "$2")"
-    name="$(filename "$src")"
+    name="$(basename "$src")"
 
     mkdir -p "$destdir"
     mkdir -p src
 
+    [ -L "$dest" ] && rm "$dest"
+
+    [ "$FORCE" ] && ([ -d "$dest" ] || [ -f "$dest" ]) && rm -rf "$dest"
+
     if [ -d "$dest" ] || [ -f "$dest" ]; then
         echo "$src is already installed"
     else
-	mkdir -p "$destdir"
-	git clone "$src" "$dest"
-	script="scripts/$name"
-	if [ -f "$script" ]; then
-		(
-			cd "$dest" || exit
-			sh "$name"
-		)
-	fi
+        mkdir -p "$destdir"
+        git clone "$src" "$dest"
+        script="$PWD/scripts/$name"
+        if [ -f "$script" ]; then
+            (
+                cd "$dest" || exit
+                sh "$script"
+            )
+        fi
     fi
 }
 
 # Install the profile first, as it has all the PATH modifications.
-install profile  ~/.profile
+cp profile  ~/.profile
 
 # shellcheck disable=1090
 . ~/.profile
-
-# Install various files
-make install -C sub/sowm
-
-make install -C sub/utils
-( cd sub/utils/sfeed_fmt || exit; go install )
-
-# Install vim-plug for Neovim
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 install https://github.com/dragonsourced/scripts ~/src/scripts
 install https://github.com/dragonsourced/nvim    ~/.config/nvim
