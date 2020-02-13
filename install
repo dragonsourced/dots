@@ -22,9 +22,9 @@ install() {
     mkdir -p "$destdir"
     mkdir -p src
 
-    [ "$FORCE" ] && [ -L "$dest" ] && rm "$dest"
+    [ "$FORCE" ] && { [ -L "$dest" ] || [ -d "$dest" ]; } && rm -rf "$dest"
 
-    if [ -L "$dest" ]; then
+    if [ -L "$dest" ] || [ -d "$dest" ]; then
         echo "$(tilde "$dest") is already installed"
     else
         mkdir -p "$destdir"
@@ -52,3 +52,4 @@ install https://github.com/dragonsourced/nvim    ~/.config/nvim
 install https://github.com/dragonsourced/sowm    ~/src/ui/sowm
 install https://github.com/dragonsourced/st      ~/src/ui/st
 install https://github.com/dragonsourced/utils   ~/src/utils
+install https://github.com/dragonsourced/misc    ~/src/misc
