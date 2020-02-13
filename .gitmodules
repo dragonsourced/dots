@@ -1,12 +1,9 @@
-[submodule "repos/nvim"]
-	path = repos/nvim
-	url = https://github.com/dragonsourced/nvim
-[submodule "repos/sowm"]
-	path = repos/sowm
-	url = https://github.com/dragonsourced/sowm
-[submodule "nvim"]
-	path = sub/nvim
-	url = https://github.com/dragonsourced/nvim
 [submodule "sub/utils"]
 	path = sub/utils
 	url = https://github.com/dragonsourced/utils
+[submodule "sub/sowm"]
+	path = sub/sowm
+	url = https://github.com/dragonsourced/sowm
+[submodule "sub/nvim"]
+	path = sub/nvim
+	url = https://github.com/dragonsourced/nvim
