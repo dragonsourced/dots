@@ -34,8 +34,8 @@ __whoami() {
 
 PS1='$(__whoami) $(date +"%l:%M %p") $(__cdir) \$ '
 export EDITOR=/usr/bin/nvim
-export TERMINAL=/usr/local/bin/st
-export BINDIR=${HOME}/bin
+export TERMINAL=$HOME/bin/st
+export BINDIR=$HOME/bin
 
 clear
 cal
@@ -48,4 +48,4 @@ alias make='make -j$(nproc)'
 
 # Path directories.
 
-export PATH="$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH"
+export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
