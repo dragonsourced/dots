@@ -53,5 +53,6 @@ install https://github.com/dragonsourced/scripts ~/src/scripts
 install https://github.com/dragonsourced/nvim    ~/.config/nvim
 install https://github.com/dragonsourced/sowm    ~/src/ui/sowm
 install https://github.com/dragonsourced/st      ~/src/ui/st
+install https://github.com/dragonsourced/slock   ~/src/ui/slock
 install https://github.com/dragonsourced/utils   ~/src/utils
 install https://github.com/dragonsourced/misc    ~/src/misc
