@@ -17,7 +17,6 @@ install() {
     dest="$2"
     destdir="$(dirname "$2")"
     name="$(basename "$src")"
-    srcdir="$PWD/src/$name" # Must be absolute path for symlinks to work right.
 
     mkdir -p "$destdir"
     mkdir -p src
@@ -28,9 +27,7 @@ install() {
         echo "$(tilde "$dest") is already installed"
     else
         mkdir -p "$destdir"
-        [ "$FORCE" ] && [ -d "$srcdir" ] && rm -rf "$srcdir"
-        [ -d "$srcdir" ] || git clone "$src" "$srcdir"
-        cp -r "$srcdir" "$dest"
+        git clone "$src" "$dest"
         script="$PWD/scripts/$name"
         if [ -f "$script" ]; then
             (
