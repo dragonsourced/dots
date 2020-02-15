@@ -47,7 +47,7 @@ cp profile ~/.profile
 # Initialize these directories for reasons.
 
 mkdir -p ~/src/repos
-mkdir ~/bin
+mkdir -p ~/bin
 
 install https://github.com/dragonsourced/scripts ~/src/scripts
 install https://github.com/dragonsourced/nvim    ~/.config/nvim
