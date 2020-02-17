@@ -2,8 +2,6 @@
 #
 # Clone various repositories and move them to the proper place.
 
-# install(from, to, script)
-
 case "$1" in
     -f) FORCE=1 ;;
 esac
@@ -12,7 +10,7 @@ tilde() {
     echo "$*" | sed "s|$HOME|~|"
 }
 
-install() {
+dl() {
     src="$1"
     dest="$2"
     destdir="$(dirname "$2")"
@@ -49,10 +47,13 @@ cp profile ~/.profile
 mkdir -p ~/src/repos
 mkdir -p ~/bin
 
-install https://github.com/dragonsourced/scripts ~/src/scripts
-install https://github.com/dragonsourced/nvim    ~/.config/nvim
-install https://github.com/dragonsourced/wm      ~/src/ui/wm
-install https://github.com/dragonsourced/st      ~/src/ui/st
-install https://github.com/dragonsourced/slock   ~/src/ui/slock
-install https://github.com/dragonsourced/utils   ~/src/utils
-install https://github.com/dragonsourced/misc    ~/src/misc
+dl https://github.com/dragonsourced/scripts ~/src/scripts
+dl https://github.com/dragonsourced/nvim    ~/.config/nvim
+dl https://github.com/dragonsourced/wm      ~/src/ui/wm
+dl https://github.com/dragonsourced/st      ~/src/ui/st
+dl https://github.com/dragonsourced/slock   ~/src/ui/slock
+dl https://github.com/dragonsourced/utils   ~/src/utils
+dl https://github.com/dragonsourced/misc    ~/src/misc
+
+install -D dunst/dunstrc_light ~/src/ui/dunstrc_light
+install -D dunst/dunstrc_dark  ~/src/ui/dunstrc_light
