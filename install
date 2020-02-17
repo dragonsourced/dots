@@ -55,5 +55,5 @@ dl https://github.com/dragonsourced/slock   ~/src/ui/slock
 dl https://github.com/dragonsourced/utils   ~/src/utils
 dl https://github.com/dragonsourced/misc    ~/src/misc
 
-install -D dunst/dunstrc_light ~/src/ui/dunstrc_light
-install -D dunst/dunstrc_dark  ~/src/ui/dunstrc_light
+install -D dunst/light ~/src/ui/dunstrc_light
+install -D dunst/dark  ~/src/ui/dunstrc_light
