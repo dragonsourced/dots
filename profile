@@ -1,28 +1,8 @@
-# .profile
-#
-# Loaded by the shell, probably.
-# Who knows?
-
-# Load dircolors.
-
-if [ -x /usr/bin/dircolors ]; then
-    if [ -r ~/.dircolors ]; then
-        eval "$(dircolors -b ~/.dircolors)"
-    else
-        eval "$(dircolors -b)"
-    fi
+if [ "$DISPLAY" ] && command -v lsd; then
+    alias ls='git status -s 2> /dev/null; lsd -FS'
+else
+    alias ls='ls -FS'
 fi
-
-# Automatically show git status of a directory.
-
-ls() {
-    if [ "$*" ]; then
-        git -C "$*" status -sb 2> /dev/null
-    else
-        git status -sb 2> /dev/null
-    fi
-    /bin/ls -shvp --color=auto "$@"
-}
 
 __dir() {
     pwd | sed "s|$HOME|~|"
@@ -38,10 +18,6 @@ cal
 cat ~/TODO 2> /dev/null
 echo
 
-# Use as many processes as possible for make, because I have no patience.
-
-alias make='make -j$(nproc)'
-
-# Path directories.
+alias make="make -j$(nproc)"
 
 export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
