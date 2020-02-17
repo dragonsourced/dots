@@ -24,15 +24,11 @@ ls() {
     /bin/ls -shvp --color=auto "$@"
 }
 
-__cdir() {
+__dir() {
     pwd | sed "s|$HOME|~|"
 }
 
-__whoami() {
-    printf '%s@%s' "$(whoami)" "$(hostname)"
-}
-
-PS1='$(__whoami) $(date +"%l:%M %p") $(__cdir) \$ '
+PS1='$(__dir) \$ '
 export EDITOR=/usr/bin/nvim
 export TERMINAL=$HOME/bin/st
 export BINDIR=$HOME/bin
