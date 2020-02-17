@@ -1,5 +1,5 @@
 if [ "$DISPLAY" ] && command -v lsd; then
-    alias ls='git status -s 2> /dev/null; lsd -FS'
+    alias ls='git status -sb 2> /dev/null; lsd -FS'
 else
     alias ls='ls -FS'
 fi
