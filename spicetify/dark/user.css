@@ -1,0 +1,11 @@
+* {
+    font-family: "Iosevka", monospace;
+    color: var(--modspotify_main_fg);
+}
+
+#search-input {
+    background-color: var(--modspotify_main_bg);
+    color: var(--modspotify_main_fg);
+}
+
+.container { background-color: var(--modspotify_main_bg); }

@@ -49,6 +49,7 @@ mkdir -p ~/bin
 
 dl https://github.com/dragonsourced/scripts ~/src/scripts
 dl https://github.com/dragonsourced/nvim    ~/.config/nvim
+dl https://github.com/dragonsourced/rofi    ~/.config/rofi
 dl https://github.com/dragonsourced/wm      ~/src/ui/wm
 dl https://github.com/dragonsourced/st      ~/src/ui/st
 dl https://github.com/dragonsourced/slock   ~/src/ui/slock
@@ -57,3 +58,5 @@ dl https://github.com/dragonsourced/misc    ~/src/misc
 
 install -Dv dunst/light ~/src/ui/dunst/light
 install -Dv dunst/dark  ~/src/ui/dunst/dark
+install -Dv spicetify/dark  ~/.config/spicetify/Themes/dark
+install -Dv spicetify/light ~/.config/spicetify/Themes/light

@@ -12,6 +12,10 @@ take absolutely no responsibility if you decide to run it on your system.
             repos/
             misc/
         pkg/
+        pics/
+            wall/
+                dark
+                light
 
 # Dependencies
 
