@@ -1,7 +1,7 @@
 if [ "$DISPLAY" ] && command -v lsd; then
     alias ls='git status -sb 2> /dev/null; lsd -FS'
 else
-    alias ls='ls -FS'
+    alias ls='git status -sb 2> /dev/null; ls -FS'
 fi
 
 alias __date='date "+%l:%M %p"'

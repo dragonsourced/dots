@@ -58,5 +58,5 @@ dl https://github.com/dragonsourced/misc    ~/src/misc
 
 install -Dv dunst/light ~/src/ui/dunst/light
 install -Dv dunst/dark  ~/src/ui/dunst/dark
-install -Dv spicetify/dark  ~/.config/spicetify/Themes/dark
-install -Dv spicetify/light ~/.config/spicetify/Themes/light
+cp -rv spicetify/dark  ~/.config/spicetify/Themes/dark
+cp -rv spicetify/light ~/.config/spicetify/Themes/light
