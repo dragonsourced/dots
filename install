@@ -60,5 +60,10 @@ install -Dv dunst/light    ~/src/ui/dunst/light
 install -Dv dunst/dark     ~/src/ui/dunst/dark
 install -Dv userChrome.css ~/src/ui/userChrome.css
 
+install -Dv gtk/light ~/.config/oomox/colors/light
+install -Dv gtk/dark  ~/.config/oomox/colors/dark
+cp -rv gtk/oomox-light ~/.themes/oomox-light
+cp -rv gtk/oomox-dark  ~/.themes/oomox-dark
+
 cp -rv spicetify/dark  ~/.config/spicetify/Themes/dark
 cp -rv spicetify/light ~/.config/spicetify/Themes/light
