@@ -17,11 +17,11 @@ cal
 cat ~/TODO 2> /dev/null
 echo
 
-alias make="make -j$(nproc)"
+alias make='make -j$(nproc)'
 
 help() {
-    ( [ "$1" ] && command -v $1 && [ "$1" != help ] ) || return
-    $@ --help | less
+    ( [ "$1" ] && command -v "$1" && [ "$1" != help ] ) || return
+    "$1" --help | less
 }
 
 export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
