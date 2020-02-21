@@ -65,5 +65,6 @@ install -Dv gtk/dark  ~/.config/oomox/colors/dark
 cp -rv gtk/oomox-light ~/.themes/oomox-light
 cp -rv gtk/oomox-dark  ~/.themes/oomox-dark
 
-cp -rv spicetify/dark  ~/.config/spicetify/Themes/dark
-cp -rv spicetify/light ~/.config/spicetify/Themes/light
+mkdir -p ~/.config/spicetify/Themes
+cp -rv spicetify/dark  ~/.config/spicetify/Themes
+cp -rv spicetify/light ~/.config/spicetify/Themes
