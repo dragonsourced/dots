@@ -1,0 +1,17 @@
+*:root {
+    --tabs-border: transparent !important;
+}
+
+:root:not([customizing]) #nav-bar {
+    opacity: 0;
+    margin-top: -42px;
+    transition: opacity 100ms, margin-top 100ms;
+    z-index: 100;
+}
+
+:root:not([customizing]) #nav-bar:focus-within, #nav-bar:hover  {
+    margin-top: 0;
+    opacity: 1;
+}
+
+#nav-bar:not(:focus-within) + #PersonalToolbar:not([customizing]) { visibility: collapse; }
