@@ -6,8 +6,7 @@ fi
 
 ls() {
     [ "$@" ] || set -- .
-
-    ( cd "$@" && git status -sb 2> /dev/null; )
+    git -C "$@" status -sb 2> /dev/null
     $__lscmd "$@"
 }
 
