@@ -1,8 +1,15 @@
 if [ "$DISPLAY" ] && command -v lsd; then
-    alias ls='git status -sb 2> /dev/null; lsd -FS --color never'
+    __lscmd='lsd -FS --color never'
 else
-    alias ls='git status -sb 2> /dev/null; ls -FS'
+    __lscmd='ls -FS'
 fi
+
+ls() {
+    [ "$@" ] || set -- .
+
+    ( cd "$@" && git status -sb 2> /dev/null; )
+    $__lscmd "$@"
+}
 
 alias __date='date "+%l:%M %p"'
 alias __dir='pwd | sed "s|$HOME|~|"'
