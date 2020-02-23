@@ -6,7 +6,6 @@
     opacity: 0;
     margin-top: -40px;
     transition: opacity 100ms, margin-top 100ms;
-    z-index: 100;
 }
 
 :root:not([customizing]) #nav-bar:focus-within, #nav-bar:hover  {
