@@ -1,14 +1,8 @@
 if [ "$DISPLAY" ] && command -v lsd; then
-    __lscmd='lsd -FS --color never'
+    alias ls='lsd -FS --color never'
 else
-    __lscmd='ls -FS'
+    alias ls='ls -FS'
 fi
-
-ls() {
-    [ "$@" ] || set -- .
-    git -C "$@" status -sb 2> /dev/null
-    $__lscmd "$@"
-}
 
 alias __date='date "+%l:%M %p"'
 alias __dir='pwd | sed "s|$HOME|~|"'
@@ -26,7 +20,7 @@ echo
 alias make='make -j$(nproc)'
 
 help() {
-    ( [ "$1" ] && command -v "$1" && [ "$1" != help ] ) || return
+    command -v "$1" || return
     "$1" --help | less
 }
 

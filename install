@@ -68,3 +68,6 @@ cp -rv gtk/oomox-dark  ~/.themes/oomox-dark
 mkdir -p ~/.config/spicetify/Themes
 cp -rv spicetify/dark  ~/.config/spicetify/Themes
 cp -rv spicetify/light ~/.config/spicetify/Themes
+
+mkdir -p ~/src/ui
+cp -rv themes ~/src/ui
