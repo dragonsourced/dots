@@ -2,6 +2,8 @@
 #
 # Clone various repositories and move them to the proper place.
 
+sudo echo Authorization accepted.
+
 case "$1" in
     -f) FORCE=1 ;;
 esac
@@ -55,6 +57,9 @@ dl https://github.com/dragonsourced/st      ~/src/ui/st
 dl https://github.com/dragonsourced/slock   ~/src/ui/slock
 dl https://github.com/dragonsourced/utils   ~/src/utils
 dl https://github.com/dragonsourced/misc    ~/src/misc
+
+dl https://github.com/dunst-project/dunst ~/pkg/dunst
+dl git://git.codemadness.org/sfeed        ~/pkg/sfeed
 
 install -Dv dunst/light    ~/src/ui/dunst/light
 install -Dv dunst/dark     ~/src/ui/dunst/dark
