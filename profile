@@ -24,6 +24,4 @@ help() {
     "$1" --help | less
 }
 
-homewort set no
-
 export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
