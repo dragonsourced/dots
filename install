@@ -61,6 +61,8 @@ dl https://github.com/dragonsourced/misc    ~/src/misc
 dl https://github.com/dunst-project/dunst ~/pkg/dunst
 dl git://git.codemadness.org/sfeed        ~/pkg/sfeed
 
+install -Dv bspwm/bspwmrc  ~/.config/bspwm/bspwmrc
+install -Dv bspwm/sxhkdrc  ~/.config/sxhkd/bspwmrc
 install -Dv dunst/light    ~/src/ui/dunst/light
 install -Dv dunst/dark     ~/src/ui/dunst/dark
 install -Dv userChrome.css ~/src/ui/userChrome.css
