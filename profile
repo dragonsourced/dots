@@ -24,4 +24,7 @@ help() {
     "$1" --help | less
 }
 
+# shellcheck disable=1090
+[ -f ~/.cargo/env ] && . ~/.cargo/env
+
 export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
