@@ -21,7 +21,12 @@ alias make='make -j$(nproc)'
 
 help() {
     command -v "$1" || return
-    "$1" --help | less
+    cmd=$1
+    shift
+    case $cmd in
+        go) go   help "$@" ;;
+        *)  $cmd --help "$@" ;;
+    esac | ${PAGER:-less}
 }
 
 # shellcheck disable=1090
