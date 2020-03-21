@@ -50,9 +50,7 @@ super + ctrl + {1,2,3}
 
 # "picture-in-picture" shortcut
 super + u
-    bspc node focused -t floating -l above
-    mvwin bottom right
-    xdotool getactivewindow windowsize 500 300
+    bspc node focused -t floating -l above; xdotool getactivewindow windowsize 500 300; mvwin bottom right
 
 #
 # bspwm hotkeys
