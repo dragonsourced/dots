@@ -18,6 +18,7 @@ cat ~/TODO 2> /dev/null
 echo
 
 alias make='make -j$(nproc)'
+alias loc="find -name '*.[ch]' -exec cat {} \\; | wc -l"
 
 help() {
     command -v "$1" || return
