@@ -40,6 +40,14 @@ XF86AudioMute
 super + {Home,Left,Down,Up,Right}
     mvwin {center,left,bottom,top,right}
 
+# not all keyboards have a Fn key
+
+super + F4
+    chvol toggle
+
+super + {F5,F6}
+    chvol 5%{-,+}
+
 #
 # misc
 #
@@ -50,7 +58,7 @@ super + ctrl + {1,2,3}
 
 # "picture-in-picture" shortcut
 super + u
-    bspc node focused -t floating -l above -g sticky; xdotool getactivewindow windowsize 500 300; mvwin bottom right
+    picinpic
 
 #
 # bspwm hotkeys
