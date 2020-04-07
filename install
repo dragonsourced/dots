@@ -78,3 +78,5 @@ cp -rv spicetify/light ~/.config/spicetify/Themes
 
 mkdir -p ~/src/ui
 cp -rv themes ~/src/ui
+
+crontab ./crontab
