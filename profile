@@ -21,7 +21,7 @@ alias make='make -j$(nproc)'
 alias loc="find -name '*.[ch]' -exec cat {} \\; | wc -l"
 
 dict() {
-    /usr/bin/dict "$@" | less
+    /usr/bin/dict "$@" | ${PAGER:-less}
 }
 
 help() {
