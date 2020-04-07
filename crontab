@@ -22,7 +22,7 @@
 # 
 # m h  dom mon dow   command
 
-PATH = /bin:/usr/bin:/usr/local/bin:/home/Gordon/src/scripts:/home/Gordon/src/utils
+PATH = /bin:/usr/bin:/usr/local/bin:/home/Gordon/src/scripts:/home/Gordon/bin
 HOME = /home/Gordon
 
 0       17      * * * DISPLAY=:0 theme set dark
