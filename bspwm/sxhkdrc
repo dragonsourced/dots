@@ -31,6 +31,9 @@ super + shift + w
 super + s
 	scr
 
+super + v
+	frv
+
 XF86Audio{Raise,Lower}Volume
 	chvol 5%{+,-}
 
@@ -38,15 +41,15 @@ XF86AudioMute
 	chvol toggle
 
 super + {Home,Left,Down,Up,Right}
-    mvwin {center,left,bottom,top,right}
+	mvwin {center,left,bottom,top,right}
 
 # not all keyboards have a Fn key
 
 super + F4
-    chvol toggle
+	chvol toggle
 
 super + {F5,F6}
-    chvol 5%{-,+}
+	chvol 5%{-,+}
 
 #
 # misc
@@ -54,11 +57,11 @@ super + {F5,F6}
 
 # move a node to the above layer
 super + ctrl + {1,2,3}
-    bspc node focused -l {below,normal,above}
+	bspc node focused -l {below,normal,above}
 
 # "picture-in-picture" shortcut
 super + u
-    picinpic
+	picinpic
 
 #
 # bspwm hotkeys
