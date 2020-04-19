@@ -28,8 +28,8 @@ HOME = /home/Gordon
 *       *       * * * cov fetch
 0       *       * * * sfeed_update
 
-0       17      * * * DISPLAY=:0 theme set dark
-0       0       * * * DISPLAY=:0 theme set light
+0       17      * * * DISPLAY=:0 sudo -u Gordon theme set dark
+0       0       * * * DISPLAY=:0 sudo -u Gordon theme set light
 
 45      20      * * * DISPLAY=:0 notify-send "TIME" "15 minutes"
 50      20      * * * DISPLAY=:0 notify-send "TIME" "10 minutes"
