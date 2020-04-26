@@ -17,6 +17,9 @@ super + Escape
 # scripts/shortcuts
 
 super + r
+	rss new
+
+super + R
 	rss
 
 super + b
