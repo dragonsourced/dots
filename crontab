@@ -25,6 +25,21 @@
 PATH = /bin:/usr/bin:/usr/local/bin:/home/Gordon/src/scripts:/home/Gordon/bin
 HOME = /home/Gordon
 
+# prompt for lucid-dream checks every 5 minutes
+
+0       *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+5       *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+10      *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+15      *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+20      *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+25      *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+30      *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+35      *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+40      *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+45      *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+50      *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+55      *       * * * DISPLAY=:0 notify-send "DREAMS" "Lucidity must be attained."
+
 *       *       * * * cov fetch
 0       *       * * * sfeed_update
 
