@@ -18,7 +18,8 @@ cat ~/TODO 2> /dev/null
 echo
 
 alias make='make -j$(nproc)'
-alias loc="find -name '*.[ch]' -exec cat {} \\; | wc -l"
+alias cloc="find -name '*.[ch]' -exec cat {} \\; | wc -l"
+alias pyloc='wc -l $(find -type f | grep -ve pycache -e venv | grep "\.py$") | sed "s/\\.\\///"'
 
 dict() {
     /usr/bin/dict "$@" | ${PAGER:-less}
