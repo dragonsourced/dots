@@ -34,6 +34,16 @@ help() {
     esac | ${PAGER:-less}
 }
 
+venv() {
+    if [ -d venv ]; then
+        # shellcheck disable=SC1091
+        . venv/bin/activate
+    else
+        virtualenv -p python3 venv
+        venv
+    fi
+}
+
 # shellcheck disable=1090
 [ -f ~/.cargo/env ] && . ~/.cargo/env
 
