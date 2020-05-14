@@ -26,7 +26,7 @@ PATH = /bin:/usr/bin:/usr/local/bin:/home/Gordon/src/scripts:/home/Gordon/bin
 HOME = /home/Gordon
 
 *       *       * * * cov fetch
-0       *       * * * sfeed_update
+0       *       * * * DISPLAY=:0 rss update
 
 0       17      * * * DISPLAY=:0 sudo -u Gordon theme set dark
 0       0       * * * DISPLAY=:0 sudo -u Gordon theme set light
