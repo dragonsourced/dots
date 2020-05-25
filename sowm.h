@@ -3,9 +3,11 @@
 
 #define MOD Mod4Mask
 
-const char* menu[]    = {"menu_run", 0};
-const char* term[]    = {"st",       0};
-const char* scrot[]   = {"scr",      0};
+const char* quit[] = {"killall", "sowm", 0};
+
+const char* menu[]  = {"menu_run", 0};
+const char* term[]  = {"st",       0};
+const char* scrot[] = {"scr",      0};
 
 const char* voldown[] = {"chvol", "5%-",    0};
 const char* volup[]   = {"chvol", "5%+",    0};
@@ -25,6 +27,8 @@ static struct key keys[] = {
 
     {Mod1Mask,           XK_Tab, win_next,   {0}},
     {Mod1Mask|ShiftMask, XK_Tab, win_prev,   {0}},
+
+    {MOD|ShiftMask, XK_q, run, {.com = quit}},
 
     {MOD, XK_Return, run, {.com = term}},
     {MOD, XK_p,      run, {.com = menu}},
