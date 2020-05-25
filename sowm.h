@@ -17,7 +17,7 @@ const char* rssnew[] = {"rss", "new", 0};
 const char* rss[] = {"rss", 0};
 
 const char* bluetooth[] = {"bluetooth", 0};
-const char* theme[] = {"rofi", "-show", "window", 0};
+const char* theme[] = {"theme", "menu", 0};
 const char* french[] = {"frv", 0};
 
 static struct key keys[] = {
