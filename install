@@ -53,6 +53,7 @@ dl https://github.com/dragonsourced/scripts ~/src/scripts
 dl https://github.com/dragonsourced/nvim    ~/.config/nvim
 dl https://github.com/dragonsourced/rofi    ~/.config/rofi
 dl https://github.com/dragonsourced/wm      ~/src/ui/wm
+dl https://github.com/dylanaraps/sowm       ~/src/ui/sowm
 dl https://github.com/dragonsourced/st      ~/src/ui/st
 dl https://github.com/dragonsourced/slock   ~/src/ui/slock
 dl https://github.com/dragonsourced/utils   ~/src/utils
@@ -61,9 +62,8 @@ dl https://github.com/dragonsourced/misc    ~/src/misc
 dl https://github.com/dunst-project/dunst ~/pkg/dunst
 dl git://git.codemadness.org/sfeed        ~/pkg/sfeed
 
-install -Dv bspwm/bspwmrc  ~/.config/bspwm/bspwmrc
-install -Dv bspwm/sxhkdrc  ~/.config/sxhkd/sxhkdrc
-install -Dv bspwm/minimal  ~/.config/sxhkd/minimal
+install -Dv sowm.h ~/src/ui/sowm/config.h
+
 install -Dv dunst/light    ~/src/ui/dunst/light
 install -Dv dunst/dark     ~/src/ui/dunst/dark
 install -Dv userChrome.css ~/src/ui/userChrome.css
