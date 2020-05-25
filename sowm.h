@@ -15,7 +15,7 @@ const char* rssnew[] = {"rss", "new", 0};
 const char* rss[] = {"rss", 0};
 
 const char* bluetooth[] = {"bluetooth", 0};
-const char* win_menu[] = {"rofi", "-show", "window", 0};
+const char* theme[] = {"rofi", "-show", "window", 0};
 const char* french[] = {"frv", 0};
 
 static struct key keys[] = {
@@ -33,7 +33,7 @@ static struct key keys[] = {
     {MOD|ShiftMask, XK_r, run, {.com = rss}},
 
     {MOD, XK_b, run, {.com = bluetooth}},
-    {MOD, XK_w, run, {.com = win_menu}},
+    {MOD, XK_t, run, {.com = theme}},
     {MOD, XK_s, run, {.com = scrot}},
     {MOD, XK_v, run, {.com = french}},
 
