@@ -1,7 +1,7 @@
 fg 191919
 bg f5f5f5
-opacity a0
+opacity 00
 gtk  oomox-light
 icon oomox-light
 font Charter 10
-barfont GoMono Nerd Font:size=10
+barfont Charter:size=10
