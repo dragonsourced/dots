@@ -1,0 +1,72 @@
+# Settings.
+
+fontname "Charter:size=10"
+
+color menubg '#3b0f5a'
+color font '#f5f5f5'
+
+color menufg '#f5f5f5'
+color selfont '#3b0f5a'
+
+snapdist 12
+gap 24 24 24 24
+borderwidth 0
+
+ignore dock
+ignore menu
+
+command term /home/Gordon/bin/st
+
+sticky yes
+
+# Simple group functionality.
+
+bind-key M-1 group-only-1
+bind-key M-2 group-only-2
+bind-key M-3 group-only-3
+bind-key M-4 group-only-4
+bind-key M-5 group-only-5
+bind-key M-6 group-only-6
+bind-key M-7 group-only-7
+bind-key M-8 group-only-8
+bind-key M-9 group-only-9
+bind-key MS-1 window-movetogroup-1
+bind-key MS-2 window-movetogroup-2
+bind-key MS-3 window-movetogroup-3
+bind-key MS-4 window-movetogroup-4
+bind-key MS-5 window-movetogroup-5
+bind-key MS-6 window-movetogroup-6
+bind-key MS-7 window-movetogroup-7
+bind-key MS-8 window-movetogroup-8
+bind-key MS-9 window-movetogroup-9
+
+# Programs.
+
+bind-key M-Return terminal
+bind-key 4-Return terminal
+
+bind-key Print "scrot '%Y-%m-%d_$wx$h.png'"
+
+bind-key 4-y 'ytc'
+bind-key 4-r 'rss new'
+bind-key 4-R 'rss'
+bind-key 4-t 'theme menu'
+bind-key 4-b 'bluetooth'
+bind-key 4-p 'menu_run'
+bind-key 4-s 'scr'
+
+bind-key XF86AudioRaiseVolume 'chvol 5%+'
+bind-key XF86AudioLowerVolume 'chvol 5%-'
+bind-key XF86AudioMute 'chvol toggle'
+
+# Rebindings for comfort.
+
+bind-key M-f window-fullscreen
+bind-key M-m window-maximize
+bind-key M-q window-delete
+bind-key M-c mvwin center
+bind-mouse M-3 window-resize
+
+# Autogroup.
+
+autogroup 0 mpv

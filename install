@@ -39,30 +39,32 @@ dl() {
 }
 
 install() {
-	mkdir -pv "$(dirname "$2")"
-	if [ -d "$1" ]; then
-		ln -s "$1" "$2"
+	if [ -f "$2" ] || [ -L "$2" ] || [ -d "$2" ]; then
+		echo "$(tilde "$2") is already installed."
 	else
-		ln "$1" "$2"
+		mkdir -pv "$(dirname "$2")"
+		if [ -d "$1" ]; then
+			ln -sv "$1" "$2"
+		else
+			ln -v "$1" "$2"
+		fi
 	fi
 }
 
 # Install the profile first, as it has all the PATH modifications.
-cp profile ~/.profile
+install profile ~/.profile
 
 # shellcheck disable=1090
 . ~/.profile
 
 # Initialize these directories for reasons.
-
 mkdir -p ~/src/repos
 mkdir -p ~/bin
 
+# Main installation stuff.
 dl https://github.com/dragonsourced/scripts ~/src/scripts
 dl https://github.com/dragonsourced/nvim    ~/.config/nvim
 dl https://github.com/dragonsourced/rofi    ~/.config/rofi
-dl https://github.com/dragonsourced/wm      ~/src/ui/wm
-dl https://github.com/dylanaraps/sowm       ~/src/ui/sowm
 dl https://github.com/dragonsourced/st      ~/src/ui/st
 dl https://github.com/dragonsourced/slock   ~/src/ui/slock
 dl https://github.com/dragonsourced/utils   ~/src/utils
@@ -71,6 +73,7 @@ dl https://github.com/dragonsourced/misc    ~/src/misc
 dl https://github.com/dunst-project/dunst ~/pkg/dunst
 dl git://git.codemadness.org/sfeed        ~/pkg/sfeed
 
+install cwmrc ~/.cwmrc
 install userChrome.css ~/src/ui/userChrome.css
 
 install gtk/light ~/.config/oomox/colors/light
