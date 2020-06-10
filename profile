@@ -1,8 +1,4 @@
-if [ "$DISPLAY" ] && command -v lsd; then
-    alias ls='lsd -FS --color never'
-else
-    alias ls='ls -FS'
-fi
+alias ls='ls -lFSX'
 
 alias __date='date "+%l:%M %p"'
 alias __dir='pwd | sed "s|$HOME|~|"'
