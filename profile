@@ -8,7 +8,8 @@ alias __date='date "+%l:%M %p"'
 alias __dir='pwd | sed "s|$HOME|~|"'
 
 PS1='$(__date) $(__dir) \$ '
-export EDITOR=/usr/bin/nvim
+export EDITOR=/usr/bin/nvi
+export PAGER=/usr/bin/view
 export TERMINAL=$HOME/bin/st
 export BINDIR=$HOME/bin
 
