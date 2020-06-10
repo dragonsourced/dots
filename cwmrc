@@ -2,11 +2,11 @@
 
 fontname "Charter:size=10"
 
-color menubg '#3b0f5a'
-color font '#f5f5f5'
+color menubg '#f5f5f5'
+color font '#191919'
 
-color menufg '#f5f5f5'
-color selfont '#3b0f5a'
+color menufg '#191919'
+color selfont '#f5f5f5'
 
 snapdist 12
 gap 24 24 24 24
@@ -42,9 +42,6 @@ bind-key MS-9 window-movetogroup-9
 
 # Programs.
 
-bind-key M-Return terminal
-bind-key 4-Return terminal
-
 bind-key Print "scrot '%Y-%m-%d_$wx$h.png'"
 
 bind-key 4-y 'ytc'
@@ -66,6 +63,9 @@ bind-key M-m window-maximize
 bind-key M-q window-delete
 bind-key M-c mvwin center
 bind-mouse M-3 window-resize
+
+bind-key M-e menu-exec
+bind-key M-Tab terminal
 
 # Autogroup.
 
