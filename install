@@ -88,5 +88,6 @@ install gtk/oomox-dark  ~/.themes/oomox-dark
 install spicetify/theme  ~/.config/spicetify/Themes
 
 install themes ~/src/ui/themes
+install wall ~/pics/wall
 
 crontab ./crontab
