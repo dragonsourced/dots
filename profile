@@ -1,4 +1,4 @@
-alias ls='ls -lFShX'
+alias ls='git status -sb 2> /dev/null; ls -lFShX'
 
 alias __date='date "+%l:%M %p"'
 alias __dir='pwd | sed "s|$HOME|~|"'
