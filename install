@@ -39,14 +39,17 @@ dl() {
 }
 
 install() {
-	if [ -f "$2" ] || [ -L "$2" ] || [ -d "$2" ]; then
-		echo "$(tilde "$2") is already installed."
+	orig="$PWD/$1"
+	dest="$2"
+
+	if [ -f "$dest" ] || [ -L "$dest" ] || [ -d "$dest" ]; then
+		echo "$(tilde "$dest") is already installed."
 	else
-		mkdir -pv "$(dirname "$2")"
-		if [ -d "$1" ]; then
-			ln -sv "$1" "$2"
+		mkdir -pv "$(dirname "$dest")"
+		if [ -d "$orig" ]; then
+			ln -sv "$orig" "$dest"
 		else
-			ln -v "$1" "$2"
+			ln -v "$orig" "$dest"
 		fi
 	fi
 }
@@ -83,7 +86,6 @@ install gtk/oomox-dark  ~/.themes/oomox-dark
 
 install spicetify/theme  ~/.config/spicetify/Themes
 
-mkdir -p ~/src/ui
-install themes ~/src/ui
+install themes ~/src/ui/themes
 
 crontab ./crontab
