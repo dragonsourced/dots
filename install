@@ -76,6 +76,7 @@ dl https://github.com/dragonsourced/misc    ~/src/misc
 dl https://github.com/dunst-project/dunst ~/pkg/dunst
 dl git://git.codemadness.org/sfeed        ~/pkg/sfeed
 
+install exrc ~/.exrc
 install cwmrc ~/.cwmrc
 install userChrome.css ~/src/ui/userChrome.css
 
