@@ -1,4 +1,4 @@
-alias ls='ls -lFSX'
+alias ls='ls -lFShX'
 
 alias __date='date "+%l:%M %p"'
 alias __dir='pwd | sed "s|$HOME|~|"'
