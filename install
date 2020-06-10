@@ -38,6 +38,15 @@ dl() {
     fi
 }
 
+install() {
+	mkdir -pv "$(dirname "$2")"
+	if [ -d "$1" ]; then
+		ln -s "$1" "$2"
+	else
+		ln "$1" "$2"
+	fi
+}
+
 # Install the profile first, as it has all the PATH modifications.
 cp profile ~/.profile
 
@@ -62,22 +71,16 @@ dl https://github.com/dragonsourced/misc    ~/src/misc
 dl https://github.com/dunst-project/dunst ~/pkg/dunst
 dl git://git.codemadness.org/sfeed        ~/pkg/sfeed
 
-install -Dv sowm.h ~/src/ui/sowm/config.h
+install userChrome.css ~/src/ui/userChrome.css
 
-install -Dv dunst/light    ~/src/ui/dunst/light
-install -Dv dunst/dark     ~/src/ui/dunst/dark
-install -Dv userChrome.css ~/src/ui/userChrome.css
+install gtk/light ~/.config/oomox/colors/light
+install gtk/dark  ~/.config/oomox/colors/dark
+install gtk/oomox-light ~/.themes/oomox-light
+install gtk/oomox-dark  ~/.themes/oomox-dark
 
-install -Dv gtk/light ~/.config/oomox/colors/light
-install -Dv gtk/dark  ~/.config/oomox/colors/dark
-cp -rv gtk/oomox-light ~/.themes/oomox-light
-cp -rv gtk/oomox-dark  ~/.themes/oomox-dark
-
-mkdir -p ~/.config/spicetify/Themes
-cp -rv spicetify/dark  ~/.config/spicetify/Themes
-cp -rv spicetify/light ~/.config/spicetify/Themes
+install spicetify/theme  ~/.config/spicetify/Themes
 
 mkdir -p ~/src/ui
-cp -rv themes ~/src/ui
+install themes ~/src/ui
 
 crontab ./crontab
