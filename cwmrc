@@ -67,6 +67,9 @@ bind-mouse M-3 window-resize
 bind-key M-e menu-exec
 bind-key M-Tab terminal
 
+bind-key M-v window-vtile
+bind-key M-h window-htile
+
 # Autogroup.
 
 autogroup 0 mpv
