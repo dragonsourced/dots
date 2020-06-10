@@ -64,8 +64,9 @@ bind-key M-q window-delete
 bind-key M-c mvwin center
 bind-mouse M-3 window-resize
 
+bind-key M-w menu-window
 bind-key M-e menu-exec
-bind-key M-Tab terminal
+bind-key M-d terminal
 
 bind-key M-v window-vtile
 bind-key M-h window-htile
