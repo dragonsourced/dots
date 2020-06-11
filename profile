@@ -45,3 +45,5 @@ venv() {
 [ -f ~/.cargo/env ] && . ~/.cargo/env
 
 export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
+
+[ $(tty) = /dev/tty7 ] && exec startx
