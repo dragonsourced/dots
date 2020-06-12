@@ -2,12 +2,8 @@
     --tabs-border: transparent !important;
 }
 
-
-/* Auto-hide nav-bar, with a nice animation to transition it. */
-
 #nav-bar:not([customizing]) {
 	height: 40px;
-	transition: margin-top 100ms, opacity 100ms;
 }
 
 #nav-bar:not([customizing]):not(:focus-within) {
