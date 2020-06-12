@@ -5,17 +5,12 @@
 
 /* Auto-hide nav-bar, with a nice animation to transition it. */
 
-:root:not([customizing]) #nav-bar {
+#nav-bar:not([customizing]) {
 	height: 40px;
-	transition: margin-top 200ms;
+	transition: margin-top 100ms, opacity 100ms;
 }
 
-:root:not([customizing]) #nav-bar:not(:focus-within) {
+#nav-bar:not([customizing]):not(:focus-within) {
+	opacity: 0;
 	margin-top: -40px;
 }
-
-/* Hide the tabs bar, as Tree Style Tabs makes it irrelevant. */
-#TabsToolbar:not([customizing]) { visibility: collapse !important; }
-
-/* Hide the ugly "Tree Style Tabs" header in the sidebar. */
-#sidebar-header { visibility: collapse !important; }
