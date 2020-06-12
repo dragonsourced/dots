@@ -5,6 +5,7 @@ set columns=80
 map gg 1G
 
 map gs :!git status
+map gd :!git diff %
 map gc :!git add % && git commit %
 map gp :!git push
 map gP :!git push &
