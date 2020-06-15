@@ -1,0 +1,8 @@
+fg f5f5f5
+bg 022333
+opacity 00
+gtk  oomox-dark
+icon oomox-dark
+font Charter 10
+barfont Charter:size=10
+termfont Iosevka:size=10
