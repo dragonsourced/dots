@@ -3,6 +3,10 @@ alias ls='git status -sb 2> /dev/null; ls -CshFx'
 alias __date='date "+%l:%M %p"'
 alias __dir='pwd | sed "s|$HOME|~|"'
 
+alias l='ls -l'
+alias m=make
+alias mc='make clean'
+
 PS1='$(__date) $(__dir) \$ '
 export EDITOR=/usr/bin/nvi
 export TERMINAL=$HOME/bin/st
