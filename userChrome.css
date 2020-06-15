@@ -9,4 +9,5 @@
 #nav-bar:not([customizing]):not(:focus-within) {
 	opacity: 0;
 	margin-top: -40px;
+	z-index: -1000;
 }
