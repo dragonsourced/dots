@@ -2,24 +2,22 @@
 
 fontname "Charter:size=10"
 
-color menubg '#f5f5f5'
-color font '#191919'
+color menubg '#011222'
+color font '#f5f5f5'
 
-color menufg '#191919'
-color selfont '#f5f5f5'
+color menufg '#f5f5f5'
+color selfont '#011222'
 
 snapdist 12
-gap 24 24 24 24
+gap 20 20 20 20
 borderwidth 0
 
 ignore dock
 ignore menu
 
-command term /home/Gordon/bin/st
-
 sticky yes
 
-# Simple group functionality.
+# Some simple keybinds to mimic workspaces.
 
 bind-key M-1 group-only-1
 bind-key M-2 group-only-2
@@ -40,7 +38,7 @@ bind-key MS-7 window-movetogroup-7
 bind-key MS-8 window-movetogroup-8
 bind-key MS-9 window-movetogroup-9
 
-# Programs.
+# Applications.
 
 bind-key Print "scrot '%Y-%m-%d_$wx$h.png'"
 
@@ -56,7 +54,8 @@ bind-key XF86AudioRaiseVolume 'chvol 5%+'
 bind-key XF86AudioLowerVolume 'chvol 5%-'
 bind-key XF86AudioMute 'chvol toggle'
 
-# Rebindings for comfort.
+# Keybindings for native CWM functionality, as
+# opposed to external applications.
 
 bind-key M-f window-fullscreen
 bind-key M-m window-maximize
@@ -71,6 +70,4 @@ bind-key M-d terminal
 bind-key M-v window-vtile
 bind-key M-h window-htile
 
-# Autogroup.
-
-autogroup 0 mpv
+bind-key M-r restart
