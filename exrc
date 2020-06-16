@@ -16,6 +16,8 @@ map M :!make
 map v o!!xsel -b
 map V O!!xsel -b
 
+map L :!lint %
+
 ab vmain intmain(void){	return 0;}
 ab #i #include
 
