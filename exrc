@@ -13,6 +13,9 @@ map gP :!git push &
 
 map M :!make
 
+map v o!!xsel -b
+map V O!!xsel -b
+
 ab vmain intmain(void){	return 0;}
 ab #i #include
 
