@@ -1,0 +1,8 @@
+XTerm*background: #011222
+XTerm*foreground: #f5f5f5
+XTerm*faceName: Iosevka:size=10
+XTerm*internalBorder: 24
+UXTerm*background: #011222
+UXTerm*foreground: #f5f5f5
+UXTerm*faceName: Iosevka:size=10
+UXTerm*internalBorder: 24

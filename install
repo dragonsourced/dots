@@ -66,9 +66,7 @@ mkdir -p ~/bin
 
 # Main installation stuff.
 dl https://github.com/dragonsourced/scripts ~/src/scripts
-dl https://github.com/dragonsourced/nvim    ~/.config/nvim
 dl https://github.com/dragonsourced/rofi    ~/.config/rofi
-dl https://github.com/dragonsourced/st      ~/src/ui/st
 dl https://github.com/dragonsourced/slock   ~/src/ui/slock
 dl https://github.com/dragonsourced/utils   ~/src/utils
 dl https://github.com/dragonsourced/misc    ~/src/misc
@@ -78,6 +76,8 @@ dl git://git.codemadness.org/sfeed        ~/pkg/sfeed
 
 install exrc ~/.exrc
 install cwmrc ~/.cwmrc
+install Xresources ~/.Xresources
+
 install userChrome.css ~/src/ui/userChrome.css
 
 install gtk/light ~/.config/oomox/colors/light
