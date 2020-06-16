@@ -76,6 +76,7 @@ dl git://git.codemadness.org/sfeed        ~/pkg/sfeed
 
 install exrc ~/.exrc
 install cwmrc ~/.cwmrc
+install xinitrc ~/.xinitrc
 install Xresources ~/.Xresources
 
 install userChrome.css ~/src/ui/userChrome.css
