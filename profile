@@ -45,6 +45,10 @@ venv() {
     fi
 }
 
+fr() {
+	trans "$*" -t fr
+}
+
 # shellcheck disable=1090
 [ -f ~/.cargo/env ] && . ~/.cargo/env
 
