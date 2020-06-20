@@ -13,8 +13,8 @@ map gP :!git push &
 
 map M :!make
 
-map v o!!xsel -b
-map V O!!xsel -b
+map v o!!xsel -ob
+map V O!!xsel -ob
 
 map L :!lint %
 
