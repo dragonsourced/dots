@@ -46,7 +46,8 @@ venv() {
 }
 
 fr() {
-	trans "$*" -t fr
+	clear
+	trans "$*" -t fr | less -r
 }
 
 # shellcheck disable=1090
