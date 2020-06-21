@@ -56,6 +56,8 @@ export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
 
 [ "$WINDOWID" ]\
  	&& command -v transset > /dev/null\
-	&& transset --id "$WINDOWID" > /dev/null
+	&& transset --id "$WINDOWID"\
+	"$(theme g termopacity)"\
+	> /dev/null
 
 [ $(tty) = /dev/tty7 ] && exec startx

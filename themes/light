@@ -6,3 +6,4 @@ icon oomox-light
 font Charter 10
 barfont Charter:size=10
 termfont GoMono:size=10
+termopacity 1
