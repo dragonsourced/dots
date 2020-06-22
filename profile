@@ -4,8 +4,11 @@ alias __date='date "+%l:%M %p"'
 alias __dir='pwd | sed "s|$HOME|~|"'
 
 alias l='ls -l'
+
 alias m=make
 alias mc='make clean'
+
+alias fe='vi $(fzf)'
 
 PS1='$(__date) $(__dir) \$ '
 export EDITOR=/usr/bin/nvi
