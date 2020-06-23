@@ -17,7 +17,7 @@ export BINDIR=$HOME/bin
 
 clear
 cal
-cat ~/TODO 2> /dev/null
+todo
 echo
 
 alias make='make -j$(nproc)'
@@ -35,7 +35,7 @@ help() {
     case $cmd in
         go) go   help "$@" ;;
         *)  $cmd --help "$@" ;;
-    esac | ${PAGER:-less}
+    esac | ${PAGER:-less -r}
 }
 
 venv() {
