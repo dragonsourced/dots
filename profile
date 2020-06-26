@@ -15,10 +15,7 @@ export EDITOR=/usr/bin/nvi
 export TERMINAL=$HOME/bin/st
 export BINDIR=$HOME/bin
 
-clear
-cal
-todo
-echo
+export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
 
 alias make='make -j$(nproc)'
 alias cloc="find -name '*.[ch]' -exec cat {} \\; | wc -l"
@@ -56,8 +53,6 @@ fr() {
 # shellcheck disable=1090
 [ -f ~/.cargo/env ] && . ~/.cargo/env
 
-export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
-
 [ "$WINDOWID" ]\
  	&& command -v transset > /dev/null\
 	&& transset --id "$WINDOWID"\
@@ -65,3 +60,8 @@ export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
 	> /dev/null
 
 [ $(tty) = /dev/tty7 ] && exec startx
+
+clear
+cal
+todo
+echo
