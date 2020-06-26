@@ -70,6 +70,8 @@ fr() {
 
 [ $(tty) = /dev/tty7 ] && exec startx
 
+set -o vi
+
 clear
 cal
 todo
