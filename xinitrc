@@ -11,6 +11,8 @@ else
 fi
 
 x-www-browser ttwebversion.com &
+x-www-browser duolingo.com &
+x-www-browser protonmail.com/login &
 
 [ -f ~/.Xresources ] && xrdb ~/.Xresources
 
