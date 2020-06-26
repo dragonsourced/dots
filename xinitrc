@@ -15,5 +15,6 @@ x-www-browser duolingo.com &
 x-www-browser protonmail.com/login &
 
 [ -f ~/.Xresources ] && xrdb ~/.Xresources
+[ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
 exec openbsd-cwm
