@@ -6,13 +6,13 @@ alias __dir='pwd | sed "s|$HOME|~|"'
 alias l='ls -l'
 
 alias m=make
-alias m.='make -C..'
-alias mc='make clean'
-alias mc.='make clean -C..'
-alias mi='DESTDIR=$HOME make install'
-alias mi.='DESTDIR=$HOME make install -C..'
-alias smi='sudo make install'
-alias smi.='sudo make install -C..'
+alias m.="make -C.. -j$(nproc)"
+alias mc="make clean -j$(nproc)"
+alias mc.="make clean -C.. -j$(nproc)"
+alias mi="DESTDIR=$HOME make install -j$(nproc)"
+alias mi.="DESTDIR=$HOME make install -C.. -j$(nproc)"
+alias smi="sudo make install -j$(nproc)"
+alias smi.="sudo make install -C.. -j$(nproc)"
 
 alias fe='vi $(fzf)'
 
