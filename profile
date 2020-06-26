@@ -14,6 +14,9 @@ alias mi.="DESTDIR=$HOME make install -C.. -j$(nproc)"
 alias smi="sudo make install -j$(nproc)"
 alias smi.="sudo make install -C.. -j$(nproc)"
 
+alias e='${EDITOR}'
+alias et='vi -t'
+
 alias fe='vi $(fzf)'
 
 PS1='$(__date) $(__dir) \$ '
