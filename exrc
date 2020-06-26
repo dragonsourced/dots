@@ -18,7 +18,8 @@ map V O!!DISPLAY=:0 xsel -ob
 
 map L :!lint %
 
-ab vmain intmain(void){	return 0;}
 ab #i #include
+ab vmain intmain(void){
+ab amain intmain(int argc, const char **argv){
 
 map q :e#
