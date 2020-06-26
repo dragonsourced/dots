@@ -21,5 +21,3 @@ map L :!lint %
 ab #i #include
 ab vmain intmain(void){
 ab amain intmain(int argc, const char **argv){
-
-map q :e#
