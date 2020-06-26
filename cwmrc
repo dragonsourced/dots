@@ -2,11 +2,11 @@
 
 fontname "Charter:size=10"
 
-color menubg '#011222'
+color menubg '#191919'
 color font '#f5f5f5'
 
 color menufg '#f5f5f5'
-color selfont '#011222'
+color selfont '#191919'
 
 snapdist 12
 gap 20 20 20 20
@@ -50,9 +50,17 @@ bind-key 4-b 'bluetooth'
 bind-key 4-p 'menu_run'
 bind-key 4-s 'scr'
 
+# Volume.
+
 bind-key XF86AudioRaiseVolume 'chvol 5%+'
 bind-key XF86AudioLowerVolume 'chvol 5%-'
 bind-key XF86AudioMute 'chvol toggle'
+
+# Volume, for keyboards without a FN key.
+
+bind-key 4-F6 'chvol 5%+'
+bind-key 4-F5 'chvol 5%-'
+bind-key 4-F4 'chvol toggle'
 
 # Keybindings for native CWM functionality, as
 # opposed to external applications.
