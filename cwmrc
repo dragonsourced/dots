@@ -17,6 +17,8 @@ ignore menu
 
 # I'm not going to bother typing CM, ever.
 
+bind-key M-n window-menu-label
+
 bind-key M-0 group-toggle-0
 bind-key M-1 group-toggle-1
 bind-key M-2 group-toggle-2
