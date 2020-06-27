@@ -4,6 +4,9 @@ set columns=80
 
 map gg 1G
 
+map q 
+map Q 
+
 map gs :!git status
 map gd :!git diff %
 map gl :!git log --oneline %
