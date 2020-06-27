@@ -14,6 +14,12 @@ alias mi.="DESTDIR=$HOME make install -C.. -j$(nproc)"
 alias smi="sudo make install -j$(nproc)"
 alias smi.="sudo make install -C.. -j$(nproc)"
 
+alias gc='git commit'
+alias ga='git commit --amend'
+alias gn='git notes add'
+alias gl='git log --oneline'
+alias gL='git log'
+
 alias e='${EDITOR}'
 alias et='vi -t'
 
