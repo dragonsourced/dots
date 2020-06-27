@@ -7,6 +7,7 @@ map gg 1G
 map gs :!git status
 map gd :!git diff %
 map gl :!git log --oneline %
+map gL :!git log %
 map gc :!git add % && git commit %
 map ga :!git commit --amend %
 map gp :!git push
