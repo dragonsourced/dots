@@ -15,6 +15,7 @@ map gc :!git add % && git commit %
 map ga :!git commit --amend %
 map gp :!git push
 map gP :!git push &> /dev/null &
+map gn :!git notes add
 
 map M :%!fmtG$
 
