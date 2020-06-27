@@ -3,14 +3,7 @@ alias ls='git status -sb 2> /dev/null; ls -CshFx'
 alias __date='date "+%l:%M %p"'
 alias __dir='pwd | sed "s|$HOME|~|"'
 
-PS1_DISPLAY='$(xtitle $(__dir))$(__date) $(__dir) \$ '
-PS1_NODISPLAY='$(__date) $(__dir) \$ '
-
-if [ "$DISPLAY" ]; then
-	PS1="$PS1_DISPLAY"
-else
-	PS1="$PS1_NODISPLAY"
-fi
+PS1='$(__date) $(__dir) \$ '
 
 alias l='ls -l'
 
@@ -31,16 +24,12 @@ alias gL='git log'
 
 if [ "$DISPLAY" ]; then
 	e() {
-		PS1="$PS1_NODISPLAY"
 		xtitle "$*"
 		vi "$*"
-		PS1="$PS1_DISPLAY"
 	}
 	et() {
-		PS1="$PS1_NODISPLAY"
 		xtitle "$*"
 		vi -t "$*"
-		PS1="$PS1_DISPLAY"
 	}
 else
 	alias e='${EDITOR}'
