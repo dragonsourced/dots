@@ -4,8 +4,9 @@ set columns=80
 
 map gg 1G
 
-map q 
-map Q 
+map ]t 
+map [t 
+map q :e#
 
 map gs :!git status
 map gd :!git diff %
