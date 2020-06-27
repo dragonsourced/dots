@@ -74,6 +74,8 @@ bind-mouse M-3 window-resize
 
 bind-key M-w menu-window
 bind-key M-e menu-exec
+bind-key M-g menu-group
+
 bind-key M-d terminal
 
 bind-key M-v window-vtile
