@@ -20,8 +20,19 @@ alias gn='git notes add'
 alias gl='git log --oneline'
 alias gL='git log'
 
-alias e='${EDITOR}'
-alias et='vi -t'
+if [ "$DISPLAY" ]; then
+	e() {
+		xtitle "$*"
+		vi "$*"
+	}
+	et() {
+		xtitle "$*"
+		vi -t "$*"
+	}
+else
+	alias e='${EDITOR}'
+	alias et='e -t'
+fi
 
 alias fe='vi $(fzf)'
 
