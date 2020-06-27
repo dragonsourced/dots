@@ -27,7 +27,6 @@ export BINDIR=$HOME/bin
 export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
 
 alias make='make -j$(nproc)'
-alias cloc="find -name '*.[ch]' -exec cat {} \\; | wc -l"
 alias pyloc='wc -l $(find -type f | grep -ve pycache -e venv | grep "\.py$") | sed "s/\\.\\///"'
 
 dict() {
