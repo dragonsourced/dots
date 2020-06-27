@@ -3,7 +3,11 @@ alias ls='git status -sb 2> /dev/null; ls -CshFx'
 alias __date='date "+%l:%M %p"'
 alias __dir='pwd | sed "s|$HOME|~|"'
 
-PS1='$(xtitle $(__dir))$(__date) $(__dir) \$ '
+if [ "$DISPLAY" ]; then
+	PS1='$(xtitle $(__dir))$(__date) $(__dir) \$ '
+else
+	PS1='$(__date) $(__dir) \$ '
+fi
 
 alias l='ls -l'
 
