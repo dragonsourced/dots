@@ -46,8 +46,8 @@ bind-key MS-9 window-movetogroup-9
 bind-key Print "scrot '%Y-%m-%d_$wx$h.png'"
 
 bind-key 4-y 'ytc'
-bind-key 4-r 'xterm -e rss new'
-bind-key 4-R 'xterm -e rss'
+bind-key 4-r 'xterm -fullscreen -e rss new'
+bind-key 4-R 'xterm -fullscreen -e rss'
 bind-key 4-t 'theme menu'
 bind-key 4-b 'bluetooth'
 bind-key 4-p 'menu_run'
