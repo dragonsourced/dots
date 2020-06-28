@@ -10,9 +10,7 @@ else
 	theme s light
 fi
 
-x-www-browser ttwebversion.com &
-x-www-browser duolingo.com &
-x-www-browser protonmail.com/login &
+x-www-browser ttwebversion.com duolingo.com protonmail.com/login &
 
 [ -f ~/.Xresources ] && xrdb ~/.Xresources
 [ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
