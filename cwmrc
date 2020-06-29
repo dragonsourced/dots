@@ -64,6 +64,29 @@ bind-key XF86AudioMute 'chvol toggle'
 bind-key 4-F6 'chvol 5%+'
 bind-key 4-F5 'chvol 5%-'
 bind-key 4-F4 'chvol toggle'
+bind-key 4-6 'chvol 5%+'
+bind-key 4-5 'chvol 5%-'
+bind-key 4-4 'chvol toggle'
+
+# Keybindings for native CWM functionality, as
+# opposed to external applications.
+
+bind-key M-f window-fullscreen
+bind-key M-m window-maximize
+bind-key M-q window-delete
+bind-key M-c mvwin center
+bind-mouse M-3 window-resize
+
+bind-key M-w menu-window
+bind-key M-e menu-exec
+bind-key M-g menu-group
+
+bind-key M-d terminal
+
+bind-key M-v window-vtile
+bind-key M-h window-htile
+
+bind-key M-r restart
 
 # Keybindings for native CWM functionality, as
 # opposed to external applications.
