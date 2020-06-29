@@ -61,9 +61,9 @@ bind-key XF86AudioMute 'chvol toggle'
 
 # Volume, for keyboards without a FN key.
 
-bind-key 4-F6 'chvol 5%+'
-bind-key 4-F5 'chvol 5%-'
-bind-key 4-F4 'chvol toggle'
+bind-key M-F6 'chvol 5%+'
+bind-key M-F5 'chvol 5%-'
+bind-key M-F4 'chvol toggle'
 
 # Keybindings for native CWM functionality, as
 # opposed to external applications.
