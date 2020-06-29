@@ -67,6 +67,8 @@ bind-key 4-F4 'chvol toggle'
 bind-key 4-6 'chvol 5%+'
 bind-key 4-5 'chvol 5%-'
 bind-key 4-4 'chvol toggle'
+bind-key 4-1 'brightnessctl 5%-'
+bind-key 4-2 'brightnessctl 5%+'
 
 # Keybindings for native CWM functionality, as
 # opposed to external applications.
