@@ -2,11 +2,11 @@
 
 fontname "Charter:size=10"
 
-color menubg '#191919'
-color font '#f5f5f5'
+color menubg '#f5f5f5'
+color font '#191919'
 
-color menufg '#f5f5f5'
-color selfont '#191919'
+color menufg '#191919'
+color selfont '#f5f5f5'
 
 snapdist 12
 gap 20 20 20 20
@@ -52,6 +52,7 @@ bind-key 4-t 'theme menu'
 bind-key 4-b 'bluetooth'
 bind-key 4-p 'menu_run'
 bind-key 4-s 'scr'
+bind-key 4-u 'unic'
 
 # Volume.
 
