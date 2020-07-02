@@ -107,6 +107,7 @@ fr() {
 	> /dev/null
 
 # MOTD
+
 clear
 cal
 todo
