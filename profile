@@ -24,6 +24,11 @@ alias gL='git log'
 alias e='vi'
 alias et='vi -t'
 alias ef='vi $(fzf)'
+cef() {
+	__f=$(fzf)
+	cd $(dirname $__f)
+	e $(basename $__f)
+}
 
 ## Misc.
 
