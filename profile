@@ -35,7 +35,7 @@ cef() {
 alias ls='git status -sb 2> /dev/null; ls -CshFx'
 alias l='ls -l'
 
-alias todo='sed '\''s/^.*:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
+alias todo='sed -E '\''s/^[^ ]+:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
 
 # Prompt.
 
