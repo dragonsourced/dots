@@ -54,6 +54,7 @@ export TERMINAL=/usr/bin/uxterm
 export BINDIR=$HOME/bin
 
 export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
+export LESSHISTFILE=/dev/null
 
 # Settings.
 
