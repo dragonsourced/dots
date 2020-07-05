@@ -22,14 +22,14 @@
 # 
 # m h  dom mon dow   command
 
-PATH = /bin:/usr/bin:/usr/local/bin:/home/Gordon/src/scripts:/home/Gordon/bin
-HOME = /home/Gordon
+PATH = /bin:/usr/bin:/usr/local/bin:/home/gaf/src/scripts:/home/gaf/bin
+HOME = /home/gaf
 
 *       *       * * * cov fetch
 0       *       * * * DISPLAY=:0 rss update
 
-0       17      * * * DISPLAY=:0 sudo -u Gordon theme set dark
-0       0       * * * DISPLAY=:0 sudo -u Gordon theme set light
+0       17      * * * DISPLAY=:0 sudo -u gaf theme set dark
+0       0       * * * DISPLAY=:0 sudo -u gaf theme set light
 
 45      20      * * * DISPLAY=:0 notify-send "TIME" "15 minutes"
 50      20      * * * DISPLAY=:0 notify-send "TIME" "10 minutes"
