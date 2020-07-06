@@ -36,6 +36,7 @@ alias ls='git status -sb 2> /dev/null; ls -CFxh'
 alias l='ls -l'
 
 alias todo='sed -E '\''s/^[^ ]+:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
+alias bc='wcalc -r'
 
 # Prompt.
 
