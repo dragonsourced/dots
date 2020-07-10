@@ -22,7 +22,7 @@
 # 
 # m h  dom mon dow   command
 
-PATH = /bin:/usr/bin:/usr/local/bin:/home/gaf/src/scripts:/home/gaf/bin
+PATH = /bin:/home/gaf/src/scripts:/home/gaf/bin:/usr/bin:/usr/local/bin
 HOME = /home/gaf
 
 *       *       * * * cov fetch
