@@ -42,7 +42,7 @@ loc() {
 	find . -type f\
 	    | sed 's/^\.\///'\
 	    | grep -ve '^\.' -e '\/\.'\
-	    | xargs -d'\n' wc
+	    | xargs -d'\n' wc -l
 }
 
 # Prompt.
