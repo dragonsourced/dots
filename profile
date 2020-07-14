@@ -49,7 +49,7 @@ loc() {
 
 _prompt() {
 	{
-		date '+%l:%M %p'
+		date '+%l:%M %p '
 		pwd | sed "s|$HOME|~|"
 	} | tr -d '\n'
 }
