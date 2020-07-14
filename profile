@@ -39,7 +39,7 @@ alias todo='sed -E '\''s/^[^ ]+:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
 alias bc='wcalc -r'
 
 loc() {
-	find . -type f\
+	find "${*:-.}" -type f\
 	    | sed 's/^\.\///'\
 	    | grep -ve '^\.' -e '\/\.'\
 	    | xargs -d'\n' wc -l
