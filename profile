@@ -51,7 +51,7 @@ _prompt() {
 	{
 		date '+%l:%M %p'
 		pwd | sed "s|$HOME|~|"
-	} | tr '\n' ' '
+	} | tr -d '\n'
 }
 PS1='$(_prompt) \$ '
 
