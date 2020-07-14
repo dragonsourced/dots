@@ -38,7 +38,7 @@ alias l='ls -l'
 alias todo='sed -E '\''s/^[^ ]+:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
 alias bc='wcalc -r'
 
-cloc() {
+loc() {
 	wc -l $(find . -type f\
 	    | sed 's/^\.\///'\
 	    | grep -v '^\.')
