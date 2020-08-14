@@ -4,12 +4,16 @@
 
 alias m="make -j$(nproc)"
 alias m.="make -C.. -j$(nproc)"
+alias m..="make -C../.. -j$(nproc)"
 alias mc="make clean -j$(nproc)"
 alias mc.="make clean -C.. -j$(nproc)"
+alias mc..="make clean -C../.. -j$(nproc)"
 alias mi="DESTDIR=$HOME make install -j$(nproc)"
 alias mi.="DESTDIR=$HOME make install -C.. -j$(nproc)"
+alias mi..="DESTDIR=$HOME make install -C../.. -j$(nproc)"
 alias smi="sudo make install -j$(nproc)"
 alias smi.="sudo make install -C.. -j$(nproc)"
+alias smi..="sudo make install -C../.. -j$(nproc)"
 
 ## Git.
 
