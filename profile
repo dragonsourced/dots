@@ -71,7 +71,7 @@ export EDITOR=/usr/bin/vi
 export TERMINAL=/usr/bin/uxterm
 export BINDIR=$HOME/bin
 
-export PATH=$HOME/bin:/usr/local/go/bin:$HOME/go/bin:$HOME/src/scripts:$PATH
+export PATH=$HOME/bin:$HOME/src/scripts:/sbin:/usr/sbin:$PATH
 export LESSHISTFILE=/dev/null
 
 # Settings.
