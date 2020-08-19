@@ -25,6 +25,8 @@ alias gL='git log'
 
 ## Editing.
 
+### https://github.com/n-t-roff/heirloom-ex-vi
+
 alias e='vi'
 alias et='vi -t'
 alias ef='vi $(fzf)'
