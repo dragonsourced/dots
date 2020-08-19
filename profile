@@ -38,6 +38,10 @@ cef() {
 
 alias ls='git status -sb 2> /dev/null; ls -CFxh'
 alias l='ls -l'
+fez() {
+	__f=$(fzf)
+	feh "$__f" &
+}
 
 alias todo='sed '\''s/^.*:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
 alias bc='wcalc -r'
