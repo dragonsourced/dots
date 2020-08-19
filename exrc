@@ -24,7 +24,3 @@ map v o!!DISPLAY=:0 xsel -ob
 map V O!!DISPLAY=:0 xsel -ob
 
 map L :!lint %
-
-ab #i #include
-ab vmain intmain(void){
-ab amain intmain(int argc, const char **argv){
