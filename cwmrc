@@ -10,7 +10,6 @@ color selfont '#f5f5f5'
 
 snapdist 12
 gap 20 20 20 20
-borderwidth 0
 
 ignore dock
 ignore menu
