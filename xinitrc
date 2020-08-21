@@ -1,7 +1,5 @@
 #!/bin/sh
 
-compton -CczfbD1
-
 if [ -f /tmp/theme ]; then
 	theme s "$(cat /tmp/theme)"
 elif [ "$(date +%H)" -ge 18 ]; then
