@@ -18,7 +18,7 @@ map gp :!git push
 map gP :!git push &> /dev/null &
 map gn :!git notes add
 
-map M :%!fmtG$
+map M :%!fmt -w72G$
 
 map v o!!DISPLAY=:0 xsel -ob
 map V O!!DISPLAY=:0 xsel -ob
