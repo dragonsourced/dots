@@ -1,9 +1,0 @@
-fg f5f5f5
-bg 191919
-opacity 00
-gtk  oomox-dark
-icon oomox-dark
-font Iosevka 10
-barfont Iosevka:size=10
-termfont Iosevka:size=10
-termopacity 1
