@@ -23,6 +23,10 @@ alias gn='git notes add'
 alias gl='git log --oneline'
 alias gL='git log'
 
+## Packages.
+
+alias sagi='sudo apt-get install'
+
 ## Editing.
 
 ### https://github.com/n-t-roff/heirloom-ex-vi
