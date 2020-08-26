@@ -26,6 +26,8 @@ alias gL='git log'
 ## Packages.
 
 alias sagi='sudo apt-get install'
+alias saga='sudo apt-get autoremove'
+alias sagu='sudo apt-get update && sudo apt-get upgrade'
 
 ## Editing.
 
