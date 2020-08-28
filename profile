@@ -53,8 +53,16 @@ fez() {
 }
 
 alias todo='sed '\''s/^.*:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
-alias ddg='lynx lite.duckduckgo.com/lite'
 alias tt='tt++ ~/.tintin/init.txt'
+
+ddg() {
+	if [ "$*" ]; then
+		q="$(echo "$*" | sed 's/ /+/g')"
+		lynx "lite.duckduckgo.com/lite/?q=$q"
+	else
+		lynx lite.duckduckgo.com/lite
+	fi
+}
 
 loc() {
 	find "${*:-.}" -type f\
