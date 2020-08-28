@@ -53,6 +53,7 @@ fez() {
 }
 
 alias todo='sed '\''s/^.*:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
+alias ddg='lynx lite.duckduckgo.com/lite'
 alias bc='wcalc -r'
 
 loc() {
