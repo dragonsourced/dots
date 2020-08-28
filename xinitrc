@@ -8,8 +8,6 @@ else
 	theme s light
 fi
 
-x-www-browser &
-
 [ -f ~/.Xresources ] && xrdb ~/.Xresources
 [ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
