@@ -3,7 +3,7 @@
 PATH = /home/gaf/bin:/home/gaf/src/scripts:/bin:/usr/bin:/usr/local/bin
 HOME = /home/gaf
 
-*       *       * * * cov fetch
+0       *       * * * cov fetch
 0       *       * * * DISPLAY=:0 rss update
 
 55	20	* * * wall "SHUTTING DOWN IN 5"
