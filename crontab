@@ -11,4 +11,4 @@ HOME = /home/gaf
 57	20	* * * wall "SHUTTING DOWN IN 3"
 58	20	* * * wall "SHUTTING DOWN IN 2"
 59	20	* * * wall "SHUTTING DOWN IN 1"
-0	21	* * * poweroff
+*	21	* * * poweroff
