@@ -91,4 +91,5 @@ install spicetify/theme  ~/.config/spicetify/Themes
 install themes ~/src/ui/themes
 install wall ~/pics/wall
 
-crontab ./crontab
+crontab ./cron/user
+sudo crontab ./cron/root
