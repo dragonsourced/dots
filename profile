@@ -29,7 +29,7 @@ alias sagi='sudo apt-get install'
 alias sagy='sudo apt-get -y install'
 alias saga='sudo apt-get autoremove'
 alias sagu='sudo apt-get update && sudo apt-get upgrade'
-alias apts='apt-get search'
+alias apts='apt search'
 
 ## Editing.
 
