@@ -46,7 +46,7 @@ cef() {
 
 ## Misc.
 
-alias ls='git status -sb 2> /dev/null; ls -CFxh'
+alias ls='git status -sb 2> /dev/null; ls -CFXh'
 alias l='ls -l'
 fez() {
 	__f=$(fzf)
