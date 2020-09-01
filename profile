@@ -57,6 +57,7 @@ fez() {
 }
 
 alias todo='sed '\''s/^.*:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
+alias lynx='lynx -nopause -collapse_br_tags'
 alias tt='tt++ ~/.tintin/init.txt'
 
 ddg() {
