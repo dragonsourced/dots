@@ -76,6 +76,11 @@ loc() {
 	    | xargs -d'\n' wc -l
 }
 
+rep() {
+	seq 1 $1 | sed "s/.*/$2/" | tr -d '\n'
+	echo
+}
+
 # Prompt.
 
 _prompt() {
