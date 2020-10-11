@@ -30,3 +30,7 @@
 .newtab-button {
 	display: none;
 }
+
+toolbar {
+	visibility: visible !important;
+}
