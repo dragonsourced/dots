@@ -4,4 +4,4 @@ PATH = /home/gaf/bin:/home/gaf/src/scripts:/bin:/sbin:/usr/bin:/usr/sbin:/usr/lo
 HOME = /home/gaf
 
 0       *       * * * cov fetch
-0       *       * * * DISPLAY=:0 rss upq
+0       *       * * * DISPLAY=:0 rss upq > /dev/null 2> /dev/null
