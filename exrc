@@ -1,6 +1,5 @@
 set autoindent
 set shiftwidth=4
-set columns=80
 
 map gg 1G
 
