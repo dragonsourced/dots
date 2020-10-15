@@ -1,6 +1,7 @@
 fg f5f5f5
 bg 16161d
-wall #16161d
+barbg 16161d
+wall /home/gaf/pics/wall/dark
 opacity 00
 gtk  oomox-dark
 icon oomox-dark

@@ -1,6 +1,7 @@
 fg 16161d
 bg fff8dc
-wall #ffdead
+barbg ffdead
+wall /home/gaf/pics/wall/light
 opacity 00
 gtk  oomox-light
 icon oomox-light
