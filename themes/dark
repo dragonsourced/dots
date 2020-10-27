@@ -5,7 +5,7 @@ wall /home/gaf/pics/wall/dark
 opacity 00
 gtk  oomox-dark
 icon oomox-dark
-font GoMono NF 10
-barfont GoMono NF:size=10
+font Charter 10
+barfont Charter:size=10
 termfont GoMono:size=10
 termopacity 0.9
