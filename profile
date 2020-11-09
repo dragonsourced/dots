@@ -55,19 +55,17 @@ fez() {
 	__f=$(fzf)
 	feh "$__f" &
 }
+fep() {
+	if [ "$DISPLAY" ]; then
+		mpv "$(fzf)"
+	else
+		mpv --no-video "$(fzf)"
+	fi
+}
 
 alias todo='sed '\''s/^.*:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
 alias lynx='lynx -nopause -collapse_br_tags'
 alias tt='tt++ ~/.tintin/init.txt'
-
-ddg() {
-	if [ "$*" ]; then
-		q="$(echo "$*" | sed 's/ /+/g')"
-		lynx "lite.duckduckgo.com/lite/?q=$q"
-	else
-		lynx lite.duckduckgo.com/lite
-	fi
-}
 
 loc() {
 	find "${*:-.}" -type f\
@@ -93,7 +91,7 @@ PS1='$(_prompt) \$ '
 
 # Exported variables.
 
-export EDITOR=/usr/bin/vi
+export EDITOR=$HOME/bin/vi
 export TERMINAL=/usr/bin/uxterm
 export BINDIR=$HOME/bin
 
