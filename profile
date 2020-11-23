@@ -41,6 +41,7 @@ alias apts='apt search'
 alias e='vi'
 alias et='vi -t'
 alias ef='vi $(fzf)'
+alias cdf='cd "$(find -type d | fzf)"'
 cef() {
 	__f=$(fzf)
 	cd $(dirname $__f)
@@ -91,7 +92,7 @@ PS1='$(_prompt) \$ '
 
 # Exported variables.
 
-export EDITOR=$HOME/bin/vi
+export EDITOR=/usr/bin/vi
 export TERMINAL=/usr/bin/uxterm
 export BINDIR=$HOME/bin
 
