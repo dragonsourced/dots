@@ -56,6 +56,7 @@ fez() {
 	__f=$(fzf)
 	feh "$__f" &
 }
+
 fep() {
 	if [ "$DISPLAY" ]; then
 		mpv "$(fzf)"
@@ -63,6 +64,16 @@ fep() {
 		mpv --no-video "$(fzf)"
 	fi
 }
+
+shufe() {
+	for f in *; do
+		echo $f
+	done | shuf | while read f; do
+		"$@" "$f"
+	done
+}
+
+alias shup='shufe mpv --no-video'
 
 alias todo='sed '\''s/^.*:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
 alias lynx='lynx -nopause -collapse_br_tags'
