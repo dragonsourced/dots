@@ -52,6 +52,7 @@ cef() {
 
 alias ls='git status -sb 2> /dev/null; ls -CFXh'
 alias l='ls -l'
+alias feh='feh --conversion-timeout 0'
 fez() {
 	__f=$(fzf)
 	feh "$__f" &
@@ -143,6 +144,20 @@ venv() {
         venv
     fi
 }
+
+## If any arguments are provided, act more or less identically
+## to sudo.  If none, execute the previous command as root.
+
+please() {
+	if [ "$*" ]; then
+		sudo "$@"
+	else
+		sudo $(fc -lnr | sed 1q)
+	fi
+}
+
+alias pls=please
+alias plz=please
 
 ## Translate from English to French using translate-shell(1)
 
