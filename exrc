@@ -1,25 +1,27 @@
-set autoindent
-set shiftwidth=4
-
-map gg 1G
-
-map ]t 
-map [t 
-map q :e#
-
-map gs :!git status
-map gd :!git diff %
+map gc :!git add % && git commit %
 map gl :!git log --oneline %
 map gL :!git log %
-map gc :!git add % && git commit %
-map ga :!git commit --amend %
+map gd :!git diff %
+map gs :!git status
+map gr :!git rebase -i
 map gp :!git push
-map gP :!git push &> /dev/null &
-map gn :!git notes add
 
-map M :%!ffmtG$
+map ,c !!align c
+map ,r !!align r
+map ,l !!align l
+map ,d !!date '+\%d \%b \%Y'
 
+map M {!}fmt -w64 -g64
+map L :!lint %
+map K :!man 
+
+map q :e#
+map gg 1G
 map v o!!DISPLAY=:0 xsel -ob
 map V O!!DISPLAY=:0 xsel -ob
 
-map L :!lint %
+set wraplen=64
+set autoindent
+
+abbr -m &mdash;
+abbr -n &endash;
