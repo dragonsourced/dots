@@ -11,7 +11,7 @@ map ,r !!align r
 map ,l !!align l
 map ,d !!date '+\%d \%b \%Y'
 
-map M {!}fmt -w64 -g64
+map M {!}fmt -w72 -g72
 map L :!lint %
 map K :!man 
 
@@ -20,7 +20,7 @@ map gg 1G
 map v o!!DISPLAY=:0 xsel -ob
 map V O!!DISPLAY=:0 xsel -ob
 
-set wraplen=64
+set wraplen=72
 set autoindent
 
 abbr -m &mdash;
