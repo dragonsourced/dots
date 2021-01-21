@@ -71,9 +71,9 @@ dl https://github.com/dragonsourced/slock   ~/src/ui/slock
 dl https://github.com/dragonsourced/utils   ~/src/utils
 dl https://github.com/dragonsourced/misc    ~/src/misc
 
-dl https://github.com/dunst-project/dunst ~/pkg/dunst
-dl https://github.com/LemonBoy/bar        ~/pkg/lemonbar
-dl git://git.codemadness.org/sfeed        ~/pkg/sfeed
+dl https://github.com/dunst-project/dunst	~/pkg/dunst
+dl https://gitlab.com/protesilaos/lemonbar-xft	~/pkg/lemonbar
+dl git://git.codemadness.org/sfeed		~/pkg/sfeed
 
 install exrc ~/.exrc
 install cwmrc ~/.cwmrc
