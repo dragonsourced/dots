@@ -22,6 +22,3 @@ map V O!!DISPLAY=:0 xsel -ob
 
 set wraplen=72
 set autoindent
-
-abbr -m &mdash;
-abbr -n &endash;
