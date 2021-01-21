@@ -1,11 +1,11 @@
 fg 16161d
 bg fff8dc
-barbg ffdead
-wall /home/gaf/pics/wall/light
+barbg faf0e6
+wall #faf0e6
 opacity 00
 gtk  oomox-light
 icon oomox-light
-font Charter 10
-barfont Charter:size=10
+font Bitstream Charter 10
+barfont Bitstream Charter:size=10
 termfont GoMono:size=10
 termopacity 0.9
