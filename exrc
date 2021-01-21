@@ -17,8 +17,8 @@ map K :!man
 
 map q :e#
 map gg 1G
-map v o!!DISPLAY=:0 xsel -ob
-map V O!!DISPLAY=:0 xsel -ob
+map v !!DISPLAY=:0 echo "$(cat)$(xsel -bo)"
+map V !!DISPLAY=:0 echo "$(xsel -bo)$(cat)"
 
 set wraplen=72
 set autoindent
