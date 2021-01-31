@@ -1,3 +1,5 @@
+set exrc
+
 map gc :!git add % && git commit %
 map gl :!git log --oneline %
 map gL :!git log %
