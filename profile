@@ -39,7 +39,6 @@ alias apts='apt search'
 ### https://github.com/n-t-roff/heirloom-ex-vi
 
 alias e='vi'
-alias et='vi -t'
 alias ef='vi $(fzf)'
 alias cdf='cd "$(find -type d | fzf)"'
 cef() {
@@ -158,13 +157,6 @@ please() {
 
 alias pls=please
 alias plz=please
-
-## Translate from English to French using translate-shell(1)
-
-fr() {
-	clear
-	trans "$*" -t fr | less -r
-}
 
 [ $(tty) = /dev/tty7 ] && exec startx
 
