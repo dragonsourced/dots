@@ -65,19 +65,18 @@ fep() {
 	fi
 }
 
-shufe() {
-	for f in *; do
-		echo $f
-	done | shuf | while read f; do
-		"$@" "$f"
-	done
+shup() {
+	find -type f | shuf | sed 's/"/\\"/g;s/^/"/;s/$/"/' | xargs mpv
 }
-
-alias shup='shufe mpv --no-video'
 
 alias todo='sed '\''s/^.*:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
 alias lynx='lynx -nopause -collapse_br_tags'
-alias tt='tt++ ~/.tintin/init.txt'
+tt() {
+	echo "#READ $HOME/.tintin/init.txt" > ~/.tintin/run.txt
+	echo "#SESSION MAIN $1 $2" >> ~/.tintin/run.txt
+	tt++ ~/.tintin/run.txt
+	rm ~/.tintin/run.txt
+}
 
 loc() {
 	find "${*:-.}" -type f\
@@ -107,7 +106,7 @@ export EDITOR=/usr/bin/vi
 export TERMINAL=/usr/bin/uxterm
 export BINDIR=$HOME/bin
 
-export PATH=$HOME/bin:$HOME/src/scripts:/sbin:/usr/sbin:$PATH
+export PATH=$HOME/bin:$HOME/usr/local/bin:$HOME/src/scripts:/sbin:/usr/sbin:$PATH
 export LESSHISTFILE=/dev/null
 
 # Settings.
