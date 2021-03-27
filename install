@@ -79,6 +79,7 @@ install exrc ~/.exrc
 install cwmrc ~/.cwmrc
 install xinitrc ~/.xinitrc
 install Xresources ~/.Xresources
+install redshift.conf ~/.config/redshift.conf
 
 install userChrome.css ~/src/ui/userChrome.css
 
