@@ -2,15 +2,29 @@
 
 pgrep -x xsettingsd || xsettingsd &
 
-if [ -f /tmp/theme ]; then
-	theme s "$(cat /tmp/theme)"
-elif [ "$(date +%H)" -ge 18 ]; then
-	theme s dark
-else
-	theme s light
-fi
+theme s purple
 
 [ -f ~/.Xresources ] && xrdb ~/.Xresources
 [ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
-exec openbsd-cwm
+redshift &
+
+_time() { date +'%T'; }
+_date() { date +'%a %d/%m/%y'; }
+_mori() { echo "† $(mori) †"; }
+_vol() { amixer get Master | tr ' ' '\n' | grep % | tr -d '[]' | sed 1q; }
+_bat() { acpi; }
+
+_proc() {
+	while true; do
+		xsetroot -name " $(_bat) | $(_vol) | $(_mori) | $(_time) | $(_date) "
+		sleep 1
+	done
+}
+
+while true; do
+	_proc &
+	pid="$!"
+	dwm
+	kill "$pid"
+done > ${HOME}/.log/dwm 2> ${HOME}/.log/dwm
