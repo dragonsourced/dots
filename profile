@@ -66,7 +66,11 @@ fep() {
 }
 
 shup() {
-	find -type f | shuf | sed 's/"/\\"/g;s/^/"/;s/$/"/' | xargs mpv
+	if [ "$DISPLAY" ]; then
+		find -type f | shuf | sed 's/"/\\"/g;s/^/"/;s/$/"/' | xargs mpv
+	else
+		find -type f | shuf | sed 's/"/\\"/g;s/^/"/;s/$/"/' | xargs mpv --no-video
+	fi
 }
 
 alias todo='sed '\''s/^.*:/\x1b[1m&\x1b[0m/'\'' ~/TODO'
@@ -157,7 +161,7 @@ please() {
 alias pls=please
 alias plz=please
 
-[ $(tty) = /dev/tty7 ] && exec startx
+[ $(tty) = /dev/tty7 ] && exec sway
 
 # Transparency (if available).
 
