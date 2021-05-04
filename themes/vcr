@@ -9,5 +9,5 @@ font VCR OSD Mono 15.75
 barfont VCR OSD Mono:size=15.75
 termfont VCR OSD Mono:size=15.75
 termopacity 0.9
-borderwidth 4
+borderwidth 3
 gaps 0
