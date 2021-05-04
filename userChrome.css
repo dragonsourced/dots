@@ -16,20 +16,8 @@
 	z-index: -1000;
 }
 
-/* Hide splitter, when using Tree Style Tab. */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
-	display: none !important;
-}
-
-/* Hide sidebar header, when using Tree Style Tab. */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
-	visibility: collapse;
-}
-
-/* Hide 'new tab' button. */
-.newtab-button {
-	display: none;
-}
+#sidebar-box + #sidebar-splitter { display: none !important; }
+#sidebar-box #sidebar-header { visibility: collapse !important; }
 
 toolbar {
 	visibility: visible !important;
