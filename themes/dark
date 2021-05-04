@@ -1,7 +1,7 @@
-fg ffc0cb
-bg 301934
+fg ffffff
+bg 000000
 barbg 000000
-wall /home/gaf/pics/wall/purple_heart.jpg
+wall 000000
 opacity 00
 gtk  oomox-dark
 icon oomox-dark
@@ -10,4 +10,4 @@ barfont monospace:size=10
 termfont monospace:size=10
 termopacity 0.9
 borderwidth 1
-gaps 0
+gaps 10

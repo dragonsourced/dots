@@ -1,0 +1,13 @@
+fg ffffff
+bg 000080
+barbg 000080
+wall 000080
+opacity 00
+gtk  oomox-dark
+icon oomox-dark
+font C64 Pro Mono 12
+barfont C64 Pro Mono:size=12
+termfont C64 Pro Mono:size=10
+termopacity 0.9
+borderwidth 4
+gaps 0
