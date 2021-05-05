@@ -1,13 +1,13 @@
 fg ffffff
-bg 000000
-barbg 000000
-wall 000000
+bg 16161d
+barbg 16161d
+wall 16161d
 opacity 00
 gtk  oomox-dark
 icon oomox-dark
-font monospace 10
-barfont monospace:size=10
-termfont monospace:size=10
+font VCR OSD Mono 15.75
+barfont VCR OSD Mono:size=15.75
+termfont VCR OSD Mono:size=15.75
 termopacity 0.9
-borderwidth 1
-gaps 10
+borderwidth 3
+gaps 0
