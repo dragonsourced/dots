@@ -10,4 +10,4 @@ barfont monospace:size=10
 termfont monospace:size=10
 termopacity 0.9
 borderwidth 1
-gaps 0
+gaps 10
