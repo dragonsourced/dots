@@ -5,8 +5,8 @@ wall /home/gaf/pics/wall/pines.jpg
 opacity 00
 gtk  oomox-light
 icon oomox-light
-font Bitstream Charter 10
-barfont Bitstream Charter:size=10
+font serif 10
+barfont serif:size=10
 termfont GoMono:size=10
 termopacity 0.9
 borderwidth 1
