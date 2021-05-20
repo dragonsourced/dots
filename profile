@@ -110,7 +110,7 @@ export EDITOR=/usr/bin/vi
 export TERMINAL=/usr/bin/uxterm
 export BINDIR=$HOME/bin
 
-export PATH=$HOME/bin:$HOME/usr/local/bin:$HOME/src/scripts:/sbin:/usr/sbin:$PATH
+export PATH=$HOME/bin:$HOME/usr/local/bin:$HOME/usr/bin:$HOME/src/scripts:/sbin:/usr/sbin:$PATH
 export LESSHISTFILE=/dev/null
 
 # Settings.
