@@ -1,7 +1,7 @@
-fg 16161d
-bg fff8dc
+fg fff8dc
+bg 16161d
 barfg 16161d
-barbg faf0e6
+barbg fff8dc
 wall /home/gaf/pics/wall/pines.jpg
 opacity 00
 gtk  oomox-light
