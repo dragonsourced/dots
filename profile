@@ -5,6 +5,7 @@
 alias m="make -j$(nproc)"
 alias m.="make -C.. -j$(nproc)"
 alias m..="make -C../.. -j$(nproc)"
+alias mr="make run -j$(nproc)"
 alias md="make debug -j$(nproc)"
 alias md.="make debug -C.. -j$(nproc)"
 alias md..="make debug -C../.. -j$(nproc)"
